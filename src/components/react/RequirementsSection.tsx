@@ -29,11 +29,11 @@ export default function RequirementsSection({
 
   return (
     <section
-      className="relative overflow-hidden bg-background pt-14 md:pt-20"
+      className="relative overflow-hidden bg-background "
       aria-labelledby="requirements-title"
     >
       <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] md:items-stretch md:gap-8 md:px-10 md:pb-0 lg:gap-10">
-        <div className="pb-10 md:pb-20">
+        <div className="pb-10 md:pb-20 pt-14 md:pt-20">
           <motion.h2
             id="requirements-title"
             className="mb-8 max-w-[656px] text-[28px] font-semibold leading-[1.15] text-text md:mb-10 md:text-[42px]"

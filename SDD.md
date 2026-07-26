@@ -156,3 +156,42 @@ Según las imágenes de los prototypes
 
 
 5)
+
+commit de cambios,
+
+luego centramos el set de cards y además refactorizar animación para que sea uno donde cada card va entrando de izquer da derecha de forma recta como observa en la imagen que te paso 
+
+era de derecha a izquierda como entrante, además más widht y menos height, y jusntar poco más próimo al texto (estoc omo la imagen del protype)
+
+6)
+commit y luego
+
+cambios en responsive
+- en el footer también el conócenos al lado derecho del logo, acomodamos
+- en "¿Qué necesitas para participar?" consideramos las felchas en movimiento también
+- las preguntas frecuentes es: "¿Quiénes pueden postular?
+El programa está dirigido a estudiantes de los últimos años de la UTP, mayores de 18 años, que quieran prepararse para su búsqueda de empleo y fortalecer las habilidades que hoy buscan las empresas. 
+
+¿Cómo será el proceso de selección?
+El proceso de selección consta de tres etapas:
+Completar el formulario de postulación.
+Compartir información sobre tu formación y experiencia.
+Responder algunas preguntas grabadas para conocer mejor tu motivación e interés por participar.
+Las personas seleccionadas recibirán un correo con los siguientes pasos para confirmar su participación.
+¿Cuántos estudiantes serán seleccionados?
+En esta primera edición se seleccionará un grupo de 70 estudiantes. 
+
+¿Cuánto dura el programa?
+El programa tiene una duración de 6 semanas y combina sesiones en vivo con actividades prácticas para que puedas aplicar lo aprendido desde el primer día. 
+
+¿Cuánto tiempo debo dedicar cada semana?
+Deberás dedicar aproximadamente 10 horas por semana, distribuidas entre:
+6 horas de sesiones grupales en vivo.
+4 horas de actividades individuales.
+
+¿Tiene algún costo?
+No. Gracias a la alianza entre la UTP y Laboratoria, este programa es exclusivo para estudiantes de la universidad. 
+
+¿Cuándo inicia?
+La próxima edición iniciará (fecha por confirmar).
+Las personas seleccionadas recibirán toda la información por correo antes del inicio del programa."

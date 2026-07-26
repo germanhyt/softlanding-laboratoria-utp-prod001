@@ -38,7 +38,7 @@ export default function InsightSection({
           src={chevronTop}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 -top-32 w-[220px] md:-right-4 md:-top-[120px] md:w-[360px] lg:-right-2"
+          className="pointer-events-none absolute -right-[6rem] -top-[2rem] w-[220px] md:-right-4 md:-top-[5.5rem] md:w-[360px] lg:-right-40"
           initial={reduce ? false : { opacity: 0, x: 40, rotate: -6 }}
           whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           viewport={viewportOnce}
@@ -48,7 +48,7 @@ export default function InsightSection({
           src={chevronBottom}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-24 right-[-12px] w-[190px] md:-bottom-28 md:right-6 md:w-[280px] lg:right-10"
+          className="pointer-events-none absolute -bottom-24 right-[-12px] w-[200px] md:-bottom-28 md:right-6 md:w-[280px] lg:-right-8"
           initial={reduce ? false : { opacity: 0, x: 48, y: 24 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={viewportOnce}

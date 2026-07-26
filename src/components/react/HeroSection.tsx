@@ -84,7 +84,7 @@ export default function HeroSection({
                 animate={{ scaleY: 1 }}
                 transition={{ delay: 0.35, duration: 0.55, ease: easeOutExpo }}
               />
-              <p className="max-w-[463px] text-sm leading-relaxed text-white md:text-base">
+              <p className="max-w-[300px] md:max-w-[463px] text-xs leading-relaxed text-white md:text-base">
                 {description}
               </p>
             </motion.div>
