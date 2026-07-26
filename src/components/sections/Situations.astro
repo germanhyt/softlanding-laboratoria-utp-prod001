@@ -1,0 +1,24 @@
+---
+import { siteConfig } from "@/config/site.config";
+import { situationsContent } from "@/data/content";
+import SituationsCarousel from "@/components/react/SituationsCarousel";
+import CtaButton from "@/components/ui/CtaButton.astro";
+---
+
+<section class="bg-background-muted py-14 md:py-20" aria-labelledby="situations-title">
+  <div class="mx-auto w-full max-w-[1440px] px-4 md:px-10">
+    <div class="mb-8 max-w-[640px] md:mb-12">
+      <h2 id="situations-title" class="section-title">
+        {situationsContent.titleBefore}{" "}
+        <span class="text-accent-pink">{situationsContent.titleAccent}</span>{" "}
+        {situationsContent.titleAfter}
+      </h2>
+    </div>
+
+    <SituationsCarousel client:visible slides={situationsContent.slides} />
+
+    <div class="mt-8 md:mt-10">
+      <CtaButton href={siteConfig.links.postular} label="Postular" />
+    </div>
+  </div>
+</section>

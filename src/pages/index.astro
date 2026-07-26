@@ -1,0 +1,28 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Insight from "@/components/sections/Insight.astro";
+import Situations from "@/components/sections/Situations.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Requirements from "@/components/sections/Requirements.astro";
+import Experience from "@/components/sections/Experience.astro";
+import FinalCta from "@/components/sections/FinalCta.astro";
+import Faq from "@/components/sections/Faq.astro";
+---
+
+<BaseLayout>
+  <Header />
+  <main id="main" class="clip-main-mobile overflow-x-hidden">
+    <Hero />
+    <Insight />
+    <Situations />
+    <Skills />
+    <Requirements />
+    <Experience />
+    <FinalCta />
+    <Faq />
+  </main>
+  <Footer />
+</BaseLayout>

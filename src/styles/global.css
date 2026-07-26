@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-text antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-pink;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-pill bg-primary px-8 py-3 text-lg font-semibold text-text shadow-cta transition-transform duration-200 hover:scale-[1.02] hover:bg-primary-dark;
+  }
+
+  .section-title {
+    @apply text-[28px] font-semibold leading-tight md:text-[42px];
+  }
+
+  .section-body {
+    @apply text-base leading-relaxed md:text-lg;
+  }
+}
+
+@layer utilities {
+  .clip-main-mobile {
+    clip-path: inset(0 0 0 0);
+  }
+
+  @media (max-width: 767px) {
+    .clip-main-mobile {
+      clip-path: inset(0 round 0);
+    }
+  }
+}
+
+@keyframes arrows-rise {
+  from {
+    transform: translateY(12%);
+  }
+  to {
+    transform: translateY(-35%);
+  }
+}
+
+.arrows-marquee {
+  animation: arrows-rise 8s linear infinite;
+}
+
+.situations-swiper .swiper-pagination-bullet,
+.experience-swiper .swiper-pagination-bullet {
+  @apply bg-white opacity-100;
+}
+
+.situations-swiper .swiper-pagination-bullet-active,
+.experience-swiper .swiper-pagination-bullet-active {
+  @apply bg-text;
+}
+
+.situations-swiper .swiper-pagination-bullet {
+  @apply bg-line;
+}
+
+.situations-swiper .swiper-pagination-bullet-active {
+  @apply bg-text;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrows-marquee {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

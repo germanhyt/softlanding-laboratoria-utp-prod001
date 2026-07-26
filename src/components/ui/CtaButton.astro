@@ -1,0 +1,25 @@
+---
+import { isExternalUrl } from "@/utils/helpers";
+
+interface Props {
+  href: string;
+  label: string;
+  class?: string;
+  variant?: "primary" | "ghost";
+}
+
+const { href, label, class: className = "", variant = "primary" } = Astro.props;
+const external = isExternalUrl(href);
+const classes =
+  variant === "primary"
+    ? `btn-primary ${className}`
+    : `inline-flex items-center justify-center text-base text-text transition-opacity hover:opacity-70 ${className}`;
+---
+
+<a
+  href={href}
+  class={classes}
+  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+>
+  {label}
+</a>

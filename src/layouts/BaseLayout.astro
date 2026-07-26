@@ -1,0 +1,51 @@
+---
+import { seoConfig } from "@/config/seoConfig";
+import { siteConfig } from "@/config/site.config";
+import "@/styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = seoConfig.title, description = seoConfig.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, siteConfig.url).toString();
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content={seoConfig.openGraph.type} />
+    <meta property="og:locale" content={seoConfig.openGraph.locale} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={seoConfig.openGraph.siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(seoConfig.openGraph.images[0].url, siteConfig.url).toString()} />
+
+    <meta name="twitter:card" content={seoConfig.twitter.card} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(seoConfig.twitter.image, siteConfig.url).toString()} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

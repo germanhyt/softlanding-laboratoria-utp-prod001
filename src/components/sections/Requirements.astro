@@ -1,0 +1,49 @@
+---
+import { siteConfig } from "@/config/site.config";
+import { requirementsContent } from "@/data/content";
+import CtaButton from "@/components/ui/CtaButton.astro";
+import RisingArrows from "@/components/react/RisingArrows";
+---
+
+<section class="relative overflow-hidden bg-background-muted py-14 md:py-20" aria-labelledby="requirements-title">
+  <div class="mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.9fr)] md:items-start md:gap-8 md:px-10 lg:gap-12">
+    <div>
+      <h2 id="requirements-title" class="section-title mb-8 max-w-[656px] md:mb-10">
+        {requirementsContent.title}
+      </h2>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          requirementsContent.cards.map((card) => (
+            <article class="rounded-[20px] bg-white p-5 md:p-6">
+              <img src={card.icon} alt="" class="mb-4 h-8 w-8 object-contain" width="32" height="32" loading="lazy" />
+              <h3 class="mb-3 text-base font-semibold md:text-lg">{card.title}</h3>
+              <ul class="space-y-2 text-sm leading-relaxed text-text-muted md:text-base">
+                {card.items.map((item) => (
+                  <li class="flex gap-2">
+                    <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-text" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="mt-8">
+        <CtaButton href={siteConfig.links.postular} label={requirementsContent.cta} />
+      </div>
+    </div>
+
+    <div class="relative min-h-[360px] md:min-h-[520px]">
+      <RisingArrows client:visible src={requirementsContent.arrows} />
+      <img
+        src={requirementsContent.image}
+        alt="Estudiantes UTP"
+        class="relative z-10 mx-auto w-full max-w-[480px] rounded-[20px] object-cover md:absolute md:bottom-0 md:right-0 md:max-w-none md:w-[92%]"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</section>
