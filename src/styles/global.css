@@ -42,6 +42,36 @@
   }
 }
 
+/*
+  Hero overlay — prototype:
+  Desktop: negro sólido a la izquierda → fade horizontal a transparente
+  Mobile: oscuro arriba (texto) → transparente abajo
+*/
+.hero-gradient-overlay {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.62) 38%,
+    rgba(0, 0, 0, 0.22) 68%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .hero-gradient-overlay {
+    /* Figma 901:2812 + lectura del prototype: banda negra ~25–30%, fade al centro, foto libre a la derecha */
+    background-image: linear-gradient(
+      90deg,
+      #000000 0%,
+      #000000 26%,
+      rgba(18, 18, 18, 0.84) 42%,
+      rgba(0, 0, 0, 0.28) 58%,
+      rgba(0, 0, 0, 0.05) 72%,
+      rgba(0, 0, 0, 0) 82%
+    );
+  }
+}
+
 /* Loop seamless: 2 copias apiladas → desplaza exactamente 50% */
 @keyframes arrows-rise {
   from {

@@ -54,12 +54,6 @@ export default {
           DEFAULT: "#C0C0C0",
         },
       },
-      backgroundImage: {
-        "gradient-hero":
-          "linear-gradient(90deg, rgba(0, 0, 0, 0.52) 18%, rgba(0, 0, 0, 0.28) 48%, rgba(0, 0, 0, 0.04) 78%)",
-        "gradient-hero-mobile":
-          "linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.32) 55%, rgba(0, 0, 0, 0.18) 100%)",
-      },
       borderRadius: {
         section: "20px",
         pill: "25px",

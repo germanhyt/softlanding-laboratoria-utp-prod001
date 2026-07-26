@@ -55,10 +55,7 @@ export default function HeroSection({
           </picture>
         </motion.div>
 
-        <div
-          className="absolute inset-0 bg-gradient-hero-mobile md:bg-gradient-hero"
-          aria-hidden="true"
-        />
+        <div className="hero-gradient-overlay absolute inset-0" aria-hidden="true" />
 
         <motion.div
           className="relative z-10 flex min-h-[540px] flex-col justify-between px-5 py-8 md:min-h-[604px] md:px-[94px] md:pb-12 md:pt-[97px]"
