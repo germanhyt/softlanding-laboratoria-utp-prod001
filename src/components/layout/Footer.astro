@@ -5,20 +5,20 @@ import { navContent } from "@/data/content";
 
 <footer class="w-full bg-primary">
   <div
-    class="mx-auto flex w-full max-w-[1440px] flex-col items-start justify-between gap-6 px-4 py-8 sm:flex-row sm:items-center md:px-10 md:py-9"
+    class="mx-auto flex w-full max-w-[1440px] flex-row items-center justify-between gap-4 px-4 py-7 md:px-10 md:py-9"
   >
-    <a href="/" class="inline-flex items-center" aria-label={siteConfig.brand}>
+    <a href="/" class="inline-flex shrink-0 items-center" aria-label={siteConfig.brand}>
       <img
         src="/assets/logos/logo-black.png"
         alt={siteConfig.brand}
-        class="h-7 w-auto md:h-8"
+        class="h-6 w-auto sm:h-7 md:h-8"
         width="180"
         height="32"
       />
     </a>
     <a
       href={siteConfig.links.conoceNos}
-      class="text-base text-text transition-opacity hover:opacity-70"
+      class="shrink-0 text-sm text-text transition-opacity hover:opacity-70 sm:text-base"
       target="_blank"
       rel="noopener noreferrer"
     >

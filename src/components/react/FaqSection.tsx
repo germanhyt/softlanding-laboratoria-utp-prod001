@@ -6,12 +6,30 @@ import { fadeUp, viewportOnce } from "@/lib/motion";
 type FaqItem = {
   question: string;
   answer: string;
+  steps?: string[];
+  closing?: string;
 };
 
 type Props = {
   title: string;
   items: FaqItem[];
 };
+
+function FaqAnswer({ item }: { item: FaqItem }) {
+  return (
+    <div className="space-y-3 pb-5 pr-8 text-sm leading-relaxed text-text-muted md:text-base">
+      <p>{item.answer}</p>
+      {item.steps?.length ? (
+        <ul className="list-disc space-y-1.5 pl-5">
+          {item.steps.map((step) => (
+            <li key={step}>{step}</li>
+          ))}
+        </ul>
+      ) : null}
+      {item.closing ? <p>{item.closing}</p> : null}
+    </div>
+  );
+}
 
 export default function FaqSection({ title, items }: Props) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -69,9 +87,7 @@ export default function FaqSection({ title, items }: Props) {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-5 pr-8 text-sm leading-relaxed text-text-muted md:text-base">
-                        {item.answer}
-                      </p>
+                      <FaqAnswer item={item} />
                     </motion.div>
                   ) : null}
                 </AnimatePresence>

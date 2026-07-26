@@ -205,35 +205,46 @@ export const faqContent = {
     {
       question: "¿Quiénes pueden postular?",
       answer:
-        "Estudiantes de la UTP que estén en los últimos años de su carrera, tengan 18 años o más y puedan dedicar el tiempo requerido durante las 6 semanas del programa.",
+        "El programa está dirigido a estudiantes de los últimos años de la UTP, mayores de 18 años, que quieran prepararse para su búsqueda de empleo y fortalecer las habilidades que hoy buscan las empresas.",
     },
     {
       question: "¿Cómo será el proceso de selección?",
-      answer:
-        "Revisaremos tu postulación y te contactaremos con los siguientes pasos. El proceso busca identificar motivación, disponibilidad y compromiso con el programa.",
+      answer: "El proceso de selección consta de tres etapas:",
+      steps: [
+        "Completar el formulario de postulación.",
+        "Compartir información sobre tu formación y experiencia.",
+        "Responder algunas preguntas grabadas para conocer mejor tu motivación e interés por participar.",
+      ],
+      closing:
+        "Las personas seleccionadas recibirán un correo con los siguientes pasos para confirmar su participación.",
     },
     {
       question: "¿Cuántos estudiantes serán seleccionados?",
-      answer:
-        "El cupo es limitado para asegurar acompañamiento cercano. Los detalles de plazas se comunicarán durante el proceso de postulación.",
+      answer: "En esta primera edición se seleccionará un grupo de 70 estudiantes.",
     },
     {
       question: "¿Cuánto dura el programa?",
-      answer: "El programa tiene una duración de 6 semanas.",
+      answer:
+        "El programa tiene una duración de 6 semanas y combina sesiones en vivo con actividades prácticas para que puedas aplicar lo aprendido desde el primer día.",
     },
     {
       question: "¿Cuánto tiempo debo dedicar cada semana?",
-      answer:
-        "Son 2 sesiones en vivo por semana de 3 horas cada una, más aproximadamente 15 horas de trabajo individual a lo largo del programa.",
+      answer: "Deberás dedicar aproximadamente 10 horas por semana, distribuidas entre:",
+      steps: [
+        "6 horas de sesiones grupales en vivo.",
+        "4 horas de actividades individuales.",
+      ],
     },
     {
       question: "¿Tiene algún costo?",
       answer:
-        "Activa tu Carrera es un programa impulsado por Laboratoria en colaboración con UTP. La información de costo se confirmará en la convocatoria oficial.",
+        "No. Gracias a la alianza entre la UTP y Laboratoria, este programa es exclusivo para estudiantes de la universidad.",
     },
     {
       question: "¿Cuándo inicia?",
-      answer: siteConfig.program.startDate,
+      answer: "La próxima edición iniciará (fecha por confirmar).",
+      closing:
+        "Las personas seleccionadas recibirán toda la información por correo antes del inicio del programa.",
     },
   ],
 };

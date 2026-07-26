@@ -54,9 +54,10 @@ export default {
           DEFAULT: "#C0C0C0",
         },
       },
+      // menor negro o mas transparente el gradiente
       backgroundImage: {
         "gradient-hero":
-          "linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(18, 18, 18, 0.84) 42%, rgba(102, 102, 102, 0.05) 75%)",
+          "linear-gradient(90deg, rgba(0, 0, 0, 1) 26%, rgba(18, 18, 18, 0.84) 42%, rgba(102, 102, 102, 0.05) 75%)",  
         "gradient-hero-mobile":
           "linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0.35) 100%)",
       },

@@ -195,3 +195,6 @@ No. Gracias a la alianza entre la UTP y Laboratoria, este programa es exclusivo 
 ¿Cuándo inicia?
 La próxima edición iniciará (fecha por confirmar).
 Las personas seleccionadas recibirán toda la información por correo antes del inicio del programa."
+
+
+
