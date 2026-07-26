@@ -1,11 +1,11 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { EffectCards, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import { fadeUp, springSoft, stagger, viewportOnce } from "@/lib/motion";
+import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/effect-cards";
 
 type Slide = {
   id: string;
@@ -36,14 +36,8 @@ function renderWithBold(text: string, bold: string) {
 }
 
 function SituationCard({ slide }: { slide: Slide }) {
-  const reduce = useReducedMotion();
-
   return (
-    <motion.article
-      className="group relative flex h-full min-h-[300px] flex-col overflow-hidden rounded-[20px] md:min-h-[360px]"
-      whileHover={reduce ? undefined : { y: -4 }}
-      transition={springSoft}
-    >
+    <article className="flex h-full min-h-[300px] flex-col overflow-hidden rounded-[20px] md:min-h-[360px]">
       <div className={`relative flex h-full flex-1 flex-col ${slide.bg}`}>
         <div className="relative z-10 flex flex-1 flex-col p-5 pb-2 md:p-7 md:pb-3">
           <p className="max-w-[95%] text-xl font-medium leading-snug text-text md:text-[28px]">
@@ -56,13 +50,13 @@ function SituationCard({ slide }: { slide: Slide }) {
             <img
               src={slide.image}
               alt={slide.alt}
-              className="h-[120px] w-auto max-w-[180px] object-contain transition-transform duration-500 group-hover:scale-[1.03] md:h-[150px]"
+              className="h-[120px] w-auto max-w-[180px] object-contain md:h-[150px]"
               loading="lazy"
             />
           </div>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
@@ -82,10 +76,13 @@ export default function SituationsSection({
   }, []);
 
   return (
-    <section className="bg-background-muted py-14 md:py-20" aria-labelledby="situations-title">
+    <section
+      className="overflow-x-clip bg-background-muted pb-14 pt-8 md:pb-20 md:pt-10"
+      aria-labelledby="situations-title"
+    >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.div
-          className="grid items-center gap-8 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-12 lg:gap-16"
+          className="grid items-center gap-10 md:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] md:gap-12 lg:gap-16"
           variants={reduce ? undefined : stagger}
           initial={reduce ? false : "hidden"}
           whileInView="visible"
@@ -100,20 +97,36 @@ export default function SituationsSection({
             <span className="text-accent-pink">{titleAccent}</span> {titleAfter}
           </motion.h2>
 
-          <motion.div className="situations-swiper min-w-0" variants={fadeUp}>
+          <motion.div
+            className="situations-cards mx-auto w-full max-w-[320px] sm:max-w-[380px] md:mx-0 md:max-w-[420px] md:justify-self-end"
+            variants={fadeUp}
+          >
             <Swiper
-              modules={[Pagination, Autoplay]}
+              modules={[EffectCards, Autoplay]}
+              effect="cards"
+              grabCursor
               onSwiper={(swiper) => {
                 swiperRef.current = swiper;
               }}
-              spaceBetween={18}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              autoplay={reduce ? false : { delay: 4500, disableOnInteraction: false }}
-              className="!pb-10"
+              cardsEffect={{
+                perSlideOffset: 10,
+                perSlideRotate: 3,
+                rotate: true,
+                slideShadows: true,
+              }}
+              autoplay={
+                reduce
+                  ? false
+                  : {
+                      delay: 3200,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: true,
+                    }
+              }
+              className="situations-cards-swiper w-full"
             >
               {slides.map((slide) => (
-                <SwiperSlide key={slide.id}>
+                <SwiperSlide key={slide.id} className="!rounded-[20px] !bg-transparent">
                   <SituationCard slide={slide} />
                 </SwiperSlide>
               ))}

@@ -29,11 +29,11 @@ export default function RequirementsSection({
 
   return (
     <section
-      className="relative overflow-hidden bg-background py-14 md:py-20"
+      className="relative overflow-hidden bg-background pt-14 md:pt-20"
       aria-labelledby="requirements-title"
     >
-      <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(280px,0.95fr)] md:items-stretch md:gap-8 md:px-10 lg:gap-10">
-        <div>
+      <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] md:items-stretch md:gap-8 md:px-10 md:pb-0 lg:gap-10">
+        <div className="pb-10 md:pb-20">
           <motion.h2
             id="requirements-title"
             className="mb-8 max-w-[656px] text-[28px] font-semibold leading-[1.15] text-text md:mb-10 md:text-[42px]"
@@ -102,8 +102,9 @@ export default function RequirementsSection({
           </motion.div>
         </div>
 
+        {/* Columna visual: flechas top→bottom; foto pegada al borde inferior / siguiente sección */}
         <motion.div
-          className="relative min-h-[360px] md:min-h-full"
+          className="relative flex min-h-[380px] flex-col justify-end md:min-h-full"
           initial={reduce ? false : { opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
@@ -113,7 +114,7 @@ export default function RequirementsSection({
           <img
             src={image}
             alt="Estudiantes UTP"
-            className="relative z-10 mx-auto w-full max-w-[480px] rounded-[20px] object-cover md:absolute md:bottom-0 md:right-0 md:max-w-none md:w-[92%]"
+            className="relative z-10 mx-auto mb-0 w-full max-w-[520px] rounded-t-[20px] object-cover object-bottom md:absolute md:bottom-0 md:right-0 md:mx-0 md:max-w-none md:w-[96%] md:rounded-b-none"
             loading="lazy"
           />
         </motion.div>

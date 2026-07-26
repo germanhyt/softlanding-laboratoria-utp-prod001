@@ -55,12 +55,14 @@
   animation: arrows-rise 8s linear infinite;
 }
 
-.situations-swiper .swiper-pagination-bullet {
-  @apply bg-line opacity-100;
+.situations-cards-swiper {
+  overflow: visible;
 }
 
-.situations-swiper .swiper-pagination-bullet-active {
-  @apply bg-text;
+.situations-cards-swiper .swiper-slide {
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
 }
 
 .experience-swiper .swiper-pagination-bullet {

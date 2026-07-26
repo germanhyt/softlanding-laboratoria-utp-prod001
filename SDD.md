@@ -144,4 +144,15 @@ export default defineConfig({
 ====================================================
 
 
--
+4)
+
+Según las imágenes de los prototypes
+
+- en "Hoy una buena formación"  este card separar con la sección de abajo, y los vector top/bottom separalo poco más, el fondo amarillo dar pooco más de ancho según prototype  -rigth y bottom acomodar de estos vectores
+
+- en "Si te identificas" no solo son slides pasando sino vamos aplicar la animación de "Effect cards" de wiper donde cada card viene de la derecha a la izquierda, si paginación de puntos
+
+. en "¿Qué necesitas para participar?" la imagen de los universitarios debe estar en el bottom y apegado a la siguiente sección, y que solo las flechas en momiento están pegados arriba y abajo de su sección
+
+
+5)

@@ -24,11 +24,11 @@ export default function InsightSection({
 
   return (
     <section
-      className="mx-auto mt-5 w-full max-w-[1440px] px-4 md:mt-8 md:px-10"
+      className="mx-auto mt-5 w-full max-w-[1440px] px-4 pb-6 md:mt-8 md:px-10 md:pb-14"
       aria-labelledby="insight-title"
     >
       <motion.div
-        className="relative mx-auto overflow-hidden rounded-[20px] bg-primary px-5 py-10 md:max-w-[1065px] md:px-[106px] md:py-16"
+        className="relative mx-auto overflow-hidden rounded-[20px] bg-primary px-5 py-10 md:max-w-[1180px] md:px-16 md:py-[68px] lg:px-[96px]"
         variants={reduce ? undefined : fadeUp}
         initial={reduce ? false : "hidden"}
         whileInView="visible"
@@ -38,7 +38,7 @@ export default function InsightSection({
           src={chevronTop}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-24 w-[240px] md:-right-8 md:-top-[70px] md:w-[340px]"
+          className="pointer-events-none absolute -right-10 -top-32 w-[220px] md:-right-4 md:-top-[120px] md:w-[360px] lg:-right-2"
           initial={reduce ? false : { opacity: 0, x: 40, rotate: -6 }}
           whileInView={{ opacity: 1, x: 0, rotate: 0 }}
           viewport={viewportOnce}
@@ -48,7 +48,7 @@ export default function InsightSection({
           src={chevronBottom}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-16 -right-6 w-[200px] md:-bottom-20 md:right-0 md:w-[260px]"
+          className="pointer-events-none absolute -bottom-24 right-[-12px] w-[190px] md:-bottom-28 md:right-6 md:w-[280px] lg:right-10"
           initial={reduce ? false : { opacity: 0, x: 48, y: 24 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={viewportOnce}
@@ -56,7 +56,7 @@ export default function InsightSection({
         />
 
         <motion.div
-          className="relative z-10 grid gap-8 md:grid-cols-[471fr_360fr] md:items-start md:gap-[22px]"
+          className="relative z-10 grid gap-8 md:grid-cols-[1.15fr_0.95fr] md:items-start md:gap-10 lg:gap-14"
           variants={reduce ? undefined : stagger}
           initial={reduce ? false : "hidden"}
           whileInView="visible"
@@ -64,7 +64,7 @@ export default function InsightSection({
         >
           <motion.h2
             id="insight-title"
-            className="max-w-[471px] text-[26px] font-semibold leading-[1.2] text-text md:text-[36px]"
+            className="max-w-[520px] text-[26px] font-semibold leading-[1.2] text-text md:text-[36px]"
             variants={fadeUp}
           >
             {titleLead}{" "}
@@ -72,14 +72,13 @@ export default function InsightSection({
           </motion.h2>
 
           <motion.p
-            className="max-w-[360px] text-base leading-relaxed text-text md:pt-1 md:text-lg"
+            className="max-w-[400px] text-base leading-relaxed text-text md:pt-1 md:text-lg"
             variants={fadeUp}
           >
             {bodyBefore}{" "}
             <strong className="font-medium">{bodyBold}</strong> {bodyAfter}
           </motion.p>
         </motion.div>
-
       </motion.div>
     </section>
   );
