@@ -1,19 +1,31 @@
 type Props = {
   src: string;
   alt?: string;
+  className?: string;
 };
 
-/** Flechas verticales top→bottom (también en mobile), scroll infinito ↑. */
-export default function RisingArrows({ src, alt = "" }: Props) {
+/**
+ * Flechas en loop continuo a altura completa del contenedor relative.
+ */
+export default function RisingArrows({ src, alt = "", className = "" }: Props) {
   return (
-    <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[55%] overflow-hidden sm:w-[48%] md:w-[48%] lg:w-[44%]">
-      <div className="arrows-marquee absolute inset-x-0 top-0 flex min-h-[200%] flex-col">
-        <img src={src} alt={alt} className="w-full flex-1 object-cover object-top opacity-90" />
+    <div
+      className={`pointer-events-none absolute inset-y-0 right-0 z-[1] overflow-hidden ${className}`}
+      aria-hidden={!alt}
+    >
+      <div className="arrows-marquee absolute inset-x-0 top-0 flex w-full flex-col">
+        <img
+          src={src}
+          alt={alt}
+          className="block h-auto w-full max-w-none select-none"
+          draggable={false}
+        />
         <img
           src={src}
           alt=""
           aria-hidden="true"
-          className="w-full flex-1 object-cover object-top opacity-90"
+          className="block h-auto w-full max-w-none select-none"
+          draggable={false}
         />
       </div>
     </div>

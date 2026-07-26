@@ -29,11 +29,16 @@ export default function RequirementsSection({
 
   return (
     <section
-      className="relative overflow-hidden bg-background "
+      className="relative overflow-hidden bg-background"
       aria-labelledby="requirements-title"
     >
-      <div className="mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] md:items-stretch md:gap-8 md:px-10 md:pb-0 lg:gap-10">
-        <div className="pb-10 md:pb-20 pt-14 md:pt-20">
+      {/* Mobile: flechas a todo el alto de la sección (ancho actual que quedó bien) */}
+      <div className="md:hidden">
+        <RisingArrows src={arrows} className="w-[46%] xs:w-[48%] sm:w-[42%]" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] md:items-stretch md:gap-8 md:px-10 md:pb-0 lg:gap-10">
+        <div className="pb-10 pt-14 md:pb-20 md:pt-20">
           <motion.h2
             id="requirements-title"
             className="mb-8 max-w-[656px] text-[28px] font-semibold leading-[1.15] text-text md:mb-10 md:text-[42px]"
@@ -55,7 +60,7 @@ export default function RequirementsSection({
             {cards.map((card) => (
               <motion.article
                 key={card.title}
-                className="rounded-[20px] bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:p-6"
+                className="relative z-10 rounded-[20px] border border-black/5 bg-white p-5 shadow-[0_8px_24px_rgba(0,0,0,0.06)] md:p-6"
                 variants={fadeUp}
                 whileHover={reduce ? undefined : { y: -4 }}
                 transition={springSoft}
@@ -85,7 +90,7 @@ export default function RequirementsSection({
           </motion.div>
 
           <motion.div
-            className="mt-8"
+            className="relative z-10 mt-8"
             initial={reduce ? false : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewportOnce}
@@ -102,15 +107,17 @@ export default function RequirementsSection({
           </motion.div>
         </div>
 
-        {/* Columna visual: flechas top→bottom; foto pegada al borde inferior / siguiente sección */}
+        {/* Desktop: flechas en la columna visual, ancho previo */}
         <motion.div
-          className="relative flex min-h-[380px] flex-col justify-end md:min-h-full"
+          className="relative flex min-h-[320px] flex-col justify-end md:min-h-full"
           initial={reduce ? false : { opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          <RisingArrows src={arrows} />
+          <div className="hidden md:block">
+            <RisingArrows src={arrows} className="w-[48%] lg:w-[44%]" />
+          </div>
           <img
             src={image}
             alt="Estudiantes UTP"

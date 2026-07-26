@@ -200,7 +200,7 @@ export default function SituationsSection({
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.div
-          className="grid items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:gap-8 lg:gap-14"
+          className="grid items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:gap-8 lg:gap-14 pl-5 lg:pl-24"
           variants={reduce ? undefined : stagger}
           initial={reduce ? false : "hidden"}
           whileInView="visible"

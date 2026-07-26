@@ -42,17 +42,19 @@
   }
 }
 
+/* Loop seamless: 2 copias apiladas → desplaza exactamente 50% */
 @keyframes arrows-rise {
   from {
-    transform: translateY(12%);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateY(-35%);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
 .arrows-marquee {
-  animation: arrows-rise 8s linear infinite;
+  animation: arrows-rise 14s linear infinite;
+  will-change: transform;
 }
 
 .experience-swiper .swiper-pagination-bullet {

@@ -56,7 +56,7 @@ export default function HeroSection({
         </motion.div>
 
         <div
-          className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/35 md:bg-gradient-hero"
+          className="absolute inset-0 bg-gradient-hero-mobile md:bg-gradient-hero"
           aria-hidden="true"
         />
 

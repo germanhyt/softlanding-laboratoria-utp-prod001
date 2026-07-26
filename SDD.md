@@ -197,4 +197,11 @@ La próxima edición iniciará (fecha por confirmar).
 Las personas seleccionadas recibirán toda la información por correo antes del inicio del programa."
 
 
+7)
+commit, luego
+
+- en responsive la flecha en movimiento de arriba no parte del bpottom sino que ya sesté en movimiento en todo el hight, además que sea visible en el high veo que hay un fondo blanco que lo tapa solo debe estar detrás de los cards como tal, corregimos
+
+- en el hero banner de desktop que no sea tan negro el gradient
+
 
