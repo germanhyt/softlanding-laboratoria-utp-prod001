@@ -87,6 +87,14 @@
   will-change: transform;
 }
 
+.skills-swiper .swiper-pagination-bullet {
+  @apply bg-white opacity-100;
+}
+
+.skills-swiper .swiper-pagination-bullet-active {
+  @apply bg-text;
+}
+
 .experience-swiper .swiper-pagination-bullet {
   @apply bg-white opacity-100;
 }

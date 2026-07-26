@@ -11,6 +11,7 @@ type Props = {
   partner: string;
   imageDesktop: string;
   imageMobile: string;
+  imageAlt: string;
   logoWhite: string;
   logoUtp: string;
 };
@@ -25,6 +26,7 @@ export default function HeroSection({
   partner,
   imageDesktop,
   imageMobile,
+  imageAlt,
   logoWhite,
   logoUtp,
 }: Props) {
@@ -46,7 +48,7 @@ export default function HeroSection({
             <source media="(min-width: 768px)" srcSet={imageDesktop} type="image/webp" />
             <img
               src={imageMobile}
-              alt=""
+              alt={imageAlt}
               className="h-full w-full object-cover"
               width={1358}
               height={604}
@@ -107,7 +109,7 @@ export default function HeroSection({
             <div className="flex items-center gap-3 md:gap-4">
               <img
                 src={logoWhite}
-                alt={brand}
+                alt={`Logo ${brand}`}
                 className="h-[22px] w-auto md:h-[27px]"
                 width={213}
                 height={27}
@@ -117,7 +119,7 @@ export default function HeroSection({
               </span>
               <img
                 src={logoUtp}
-                alt={partner}
+                alt={`Logo ${partner}`}
                 className="h-[22px] w-auto md:h-[28px]"
                 width={85}
                 height={28}

@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://laboratoria.la",
+  site: "https://activatucarrera-laboratoria-utp.com",
   integrations: [
     react(),
     tailwind({
@@ -14,7 +14,7 @@ export default defineConfig({
     }),
     sitemap({
       changefreq: "weekly",
-      priority: 0.7,
+      priority: 1,
       lastmod: new Date("2026-07-26"),
     }),
   ],

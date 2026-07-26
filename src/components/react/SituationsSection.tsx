@@ -43,19 +43,18 @@ function renderWithBold(text: string, bold: string) {
 function SituationCard({ slide }: { slide: Slide }) {
   return (
     <article className="flex h-full w-full flex-col overflow-hidden rounded-[20px] shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
-      <div className={`relative flex h-full flex-1 flex-col ${slide.bg}`}>
-        <div className="relative z-10 mt-4 flex flex-1 flex-col p-5 pb-1 md:p-6 md:pb-2">
-          <p className="max-w-[80%] text-[22px] font-medium leading-snug text-text md:text-[24px] lg:text-[30px]">
+      <div className={`relative flex h-full min-h-0 flex-1 flex-col ${slide.bg}`}>
+        <div className="relative z-10 flex shrink-0 flex-col px-5 pb-2 pt-5 md:px-6 md:pt-6">
+          <p className="max-w-[95%] text-[20px] font-medium leading-snug text-text sm:text-[22px] md:max-w-none md:text-[24px] lg:text-[28px]">
             {renderWithBold(slide.text, slide.bold)}
           </p>
         </div>
-        <div className="mt-auto grid grid-cols-[1fr_auto] items-end">
-          <div aria-hidden="true" />
-          <div className="rounded-tl-[16px] bg-white px-3 pb-2 pt-2 md:px-4 md:pt-3">
+        <div className="mt-auto flex justify-end">
+          <div className="rounded-tl-[20px] bg-white px-2 pb-0 pt-2 md:px-3 md:pt-3">
             <img
               src={slide.image}
               alt={slide.alt}
-              className="h-[96px] w-auto max-w-[200px] object-contain md:h-[140px]"
+              className="h-[148px] w-auto max-w-[min(260px,68vw)] object-contain object-bottom sm:h-[160px] md:h-[170px]"
               loading="lazy"
             />
           </div>
@@ -65,13 +64,6 @@ function SituationCard({ slide }: { slide: Slide }) {
   );
 }
 
-/**
- * Mazo tipo póker:
- * - La carta de arriba sale hacia la derecha
- * - Pasa al final del mazo
- * - La siguiente queda al frente
- * (no sale a la izquierda → no tapa el texto)
- */
 function PokerDeckStack({ slides }: { slides: Slide[] }) {
   const [active, setActive] = useState(0);
   const [flying, setFlying] = useState<Slide | null>(null);
@@ -103,7 +95,6 @@ function PokerDeckStack({ slides }: { slides: Slide[] }) {
     return () => window.clearInterval(id);
   }, [advance, count, reduce]);
 
-  // Mientras vuela la frontal, el stack muestra las siguientes (ella irá al final)
   const start = flying ? (active + 1) % count : active;
   const layers = Array.from({ length: Math.min(VISIBLE, count) }, (_, depth) => ({
     depth,
@@ -114,10 +105,10 @@ function PokerDeckStack({ slides }: { slides: Slide[] }) {
 
   return (
     <div
-      className="relative w-full max-w-[520px] lg:max-w-[500px]"
+      className="relative mx-auto w-full max-w-[360px] sm:max-w-[420px] md:mx-0 md:max-w-[480px] lg:max-w-[520px]"
       style={{ paddingLeft: STACK_OFFSET_PX * 2 }}
     >
-      <div className="relative aspect-[4/3] w-full min-h-[18rem] overflow-visible md:min-h-[26rem]">
+      <div className="relative aspect-[4/3.2] w-full min-h-[280px] overflow-visible sm:min-h-[300px] md:aspect-[4/3] md:min-h-[320px]">
         {compacted
           .slice()
           .reverse()
@@ -200,7 +191,7 @@ export default function SituationsSection({
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.div
-          className="grid items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:gap-8 lg:gap-14 pl-5 lg:pl-24"
+          className="flex flex-col items-center gap-8 text-center md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:items-center md:gap-10 md:pl-5 md:text-left lg:gap-14 lg:pl-16"
           variants={reduce ? undefined : stagger}
           initial={reduce ? false : "hidden"}
           whileInView="visible"
@@ -208,14 +199,17 @@ export default function SituationsSection({
         >
           <motion.h2
             id="situations-title"
-            className="max-w-[480px] text-[28px] font-semibold leading-[1.15] text-text md:text-[42px]"
+            className="max-w-[340px] text-[26px] font-semibold leading-[1.2] text-text sm:max-w-[420px] sm:text-[28px] md:max-w-[480px] md:text-[42px]"
             variants={fadeUp}
           >
             {titleBefore}{" "}
             <span className="text-accent-pink">{titleAccent}</span> {titleAfter}
           </motion.h2>
 
-          <motion.div className="flex w-full items-center justify-start overflow-visible" variants={fadeUp}>
+          <motion.div
+            className="flex w-full items-center justify-center overflow-visible md:justify-start"
+            variants={fadeUp}
+          >
             <PokerDeckStack slides={slides} />
           </motion.div>
         </motion.div>

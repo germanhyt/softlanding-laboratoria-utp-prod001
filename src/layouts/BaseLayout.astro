@@ -1,6 +1,7 @@
 ---
 import { seoConfig } from "@/config/seoConfig";
 import { siteConfig } from "@/config/site.config";
+import { buildStructuredData } from "@/config/structuredData";
 import "@/styles/global.css";
 
 interface Props {
@@ -10,31 +11,51 @@ interface Props {
 
 const { title = seoConfig.title, description = seoConfig.description } = Astro.props;
 const canonical = new URL(Astro.url.pathname, siteConfig.url).toString();
+const ogImage = seoConfig.openGraph.images[0];
+const ogImageUrl = new URL(ogImage.url, siteConfig.url).toString();
+const twitterImageUrl = new URL(seoConfig.twitter.image, siteConfig.url).toString();
+const structuredData = buildStructuredData(canonical);
+const robotsContent = [
+  seoConfig.robots.index ? "index" : "noindex",
+  seoConfig.robots.follow ? "follow" : "nofollow",
+].join(", ");
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={siteConfig.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={seoConfig.keywords.join(", ")} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robotsContent} />
+    <meta name="googlebot" content={robotsContent} />
+
+    {
+      seoConfig.hreflang.map(({ lang, href }) => (
+        <link rel="alternate" hreflang={lang} href={href} />
+      ))
+    }
 
     <meta property="og:type" content={seoConfig.openGraph.type} />
     <meta property="og:locale" content={seoConfig.openGraph.locale} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={seoConfig.openGraph.siteName} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(seoConfig.openGraph.images[0].url, siteConfig.url).toString()} />
+    <meta property="og:title" content={seoConfig.openGraph.title} />
+    <meta property="og:description" content={seoConfig.openGraph.description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content={String(ogImage.width)} />
+    <meta property="og:image:height" content={String(ogImage.height)} />
+    <meta property="og:image:alt" content={ogImage.alt} />
 
     <meta name="twitter:card" content={seoConfig.twitter.card} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(seoConfig.twitter.image, siteConfig.url).toString()} />
+    <meta name="twitter:title" content={seoConfig.twitter.title} />
+    <meta name="twitter:description" content={seoConfig.twitter.description} />
+    <meta name="twitter:image" content={twitterImageUrl} />
+    <meta name="twitter:image:alt" content={ogImage.alt} />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/favicon.png" />
@@ -44,6 +65,8 @@ const canonical = new URL(Astro.url.pathname, siteConfig.url).toString();
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>
   <body>
     <slot />

@@ -8,6 +8,8 @@ export const heroContent = {
   tagline: "Impulsando el talento",
   imageDesktop: "/assets/hero/hero-banner--desktop.webp",
   imageMobile: "/assets/hero/hero-banner--mobile.webp",
+  imageAlt:
+    "Estudiantes de UTP participando en el programa Activa tu Carrera de Laboratoria",
 };
 
 export const insightContent = {
@@ -37,7 +39,7 @@ export const situationsContent = {
       text: "Tengo la formación, pero no sé cómo destacar frente a otros candidatos.",
       bold: "no sé cómo destacar",
       image: "/assets/section3/no-se-como-destacar.webp",
-      alt: "Ilustración de personas en reunión",
+      alt: "Estudiantes fortaleciendo habilidades profesionales para destacar en procesos de selección",
     },
     {
       id: "potencial",
@@ -45,7 +47,7 @@ export const situationsContent = {
       text: "No sé cómo demostrar mi potencial en un proceso de selección.",
       bold: "demostrar mi potencial",
       image: "/assets/section3/demostrar-mi-potencial.webp",
-      alt: "Ilustración de entrevista",
+      alt: "Sesión de preparación para entrevistas laborales con Activa tu Carrera",
     },
     {
       id: "herramientas",
@@ -53,7 +55,7 @@ export const situationsContent = {
       text: "Siento que me faltan las herramientas para enfrentar el mercado laboral actual.",
       bold: "Siento que me faltan las herramientas",
       image: "/assets/section3/me-faltan-herramientas.webp",
-      alt: "Ilustración de presentación",
+      alt: "Estudiantes UTP desarrollando herramientas de empleabilidad universitaria",
     },
   ],
 };
@@ -68,36 +70,42 @@ export const skillsContent = {
       description:
         "Practicarás entrevistas y recibirás feedback personalizado para llegar con mayor preparación y seguridad.",
       image: "/assets/section4/entrenaras-entrevistas.webp",
+      alt: "Entrenamiento para entrevistas de trabajo en el programa Activa tu Carrera",
     },
     {
       title: "Usarás la IA como una aliada",
       description:
         "Aprenderás a utilizar herramientas de inteligencia artificial para potenciar tu búsqueda de empleo.",
       image: "/assets/section4/usaras-ia-como-salida.webp",
+      alt: "Inteligencia artificial para estudiantes en su búsqueda de empleo",
     },
     {
       title: "Definirás tu siguiente paso profesional",
       description:
         "Construirás un plan para iniciar tu carrera con mayor claridad y seguridad.",
       image: "/assets/section4/siguiente-paso-profesional.webp",
+      alt: "Orientación profesional para potenciar la carrera universitaria",
     },
     {
       title: "Fortalecerás tu confianza",
       description:
         "Te prepararás para afrontar entrevistas y dar tus primeros pasos profesionales con mayor seguridad.",
       image: "/assets/section4/fortalecer-confianza.webp",
+      alt: "Estudiantes fortaleciendo habilidades profesionales y confianza laboral",
     },
     {
       title: "Aprenderás a comunicar el valor que puedes aportar",
       description:
         "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
       image: "/assets/section4/aprender-comunicar.webp",
+      alt: "Preparación laboral para comunicar el valor profesional ante empresas",
     },
     {
       title: "Construirás un perfil profesional sólido",
       description:
         "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
       image: "/assets/section4/construiras-perfil-profesional.webp",
+      alt: "Construcción de perfil profesional sólido con Activa tu Carrera UTP",
     },
   ],
 };
@@ -106,10 +114,12 @@ export const requirementsContent = {
   title: "¿Qué necesitas para participar?",
   cta: "Postular",
   image: "/assets/section5/universitarios-pareja.webp",
+  imageAlt: "Estudiantes de UTP listos para postular al programa Activa tu Carrera de Laboratoria",
   arrows: "/assets/decoradores/multiple-arrows-vertical.png",
   cards: [
     {
       icon: "/assets/icons/icon-lapiz.png",
+      iconAlt: "Icono de requisitos para postular a Activa tu Carrera",
       title: "Requisitos para postular",
       items: [
         "Estás en los últimos años de tu carrera en la UTP.",
@@ -119,6 +129,7 @@ export const requirementsContent = {
     },
     {
       icon: "/assets/icons/icon-cursor.png",
+      iconAlt: "Icono de postulación e inicio del programa de empleabilidad",
       title: "Postulación e inicio del programa",
       items: [
         siteConfig.program.applicationWindow,
@@ -127,6 +138,7 @@ export const requirementsContent = {
     },
     {
       icon: "/assets/icons/icon-reloj.png",
+      iconAlt: "Icono de duración y sesiones del programa Activa tu Carrera",
       title: "Duración y sesiones del programa",
       items: [
         "6 semanas de duración.",
@@ -136,6 +148,7 @@ export const requirementsContent = {
     },
     {
       icon: "/assets/icons/icon-horarios.png",
+      iconAlt: "Icono de horarios de sesiones en vivo del programa",
       title: "Horarios de sesiones en vivo",
       items: [siteConfig.program.liveSchedule],
     },
@@ -151,42 +164,49 @@ export const experienceContent = {
       description: "Sesiones en vivo con aprendizaje práctico",
       bold: "aprendizaje práctico",
       image: "/assets/section6/1_practicas.webp",
+      alt: "Sesiones en vivo con aprendizaje práctico en Activa tu Carrera",
     },
     {
       tag: "Entrevista",
       description: "Simulaciones de entrevistas",
       bold: "Simulaciones",
       image: "/assets/section6/2_entrevistas.webp",
+      alt: "Simulación de entrevistas laborales para estudiantes universitarios",
     },
     {
       tag: "Asesorías 1 a 1",
       description: "Coaching y acompañamiento personalizado",
       bold: "personalizado",
       image: "/assets/section6/3_asesorias.webp",
+      alt: "Asesoría profesional y acompañamiento laboral de Laboratoria",
     },
     {
       tag: "Feedback",
       description: "Feedback personalizado de especialistas",
       bold: "Feedback personalizado",
       image: "/assets/section6/4_feedback.webp",
+      alt: "Feedback personalizado de especialistas en empleabilidad",
     },
     {
       tag: "Herramientas de IA",
       description: "Uso de herramientas de inteligencia artificial",
       bold: "inteligencia artificial",
       image: "/assets/section6/5_herramientas.webp",
+      alt: "Herramientas de inteligencia artificial para estudiantes UTP",
     },
     {
       tag: "Comunidad",
       description: "Comunidad exclusiva de estudiantes UTP",
       bold: "Comunidad exclusiva",
       image: "/assets/section6/6_comunidad.webp",
+      alt: "Comunidad exclusiva de estudiantes UTP en el programa Laboratoria",
     },
     {
       tag: "Certificado",
       description: "Certificado de participación",
       bold: "Certificado",
       image: "/assets/section6/7_certificacion.webp",
+      alt: "Certificado de participación del programa Activa tu Carrera",
     },
   ],
 };
@@ -197,6 +217,8 @@ export const finalCtaContent = {
     "Da el siguiente paso en tu carrera con un programa diseñado para ayudarte a destacar en el mercado laboral, fortalecer tu perfil profesional y prepararte para los procesos de selección con mayor confianza.",
   cta: "Postular",
   image: "/assets/section7/convierte-tu-potencial.webp",
+  imageAlt:
+    "Estudiantes UTP potenciando su carrera profesional con el programa Activa tu Carrera",
 };
 
 export const faqContent = {

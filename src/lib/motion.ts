@@ -32,7 +32,7 @@ export const scaleIn: Variants = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 1.1, ease: easeOutExpo },
+    transition: { duration: 0.8, ease: easeOutExpo },
   },
 };
 
@@ -41,13 +41,34 @@ export const stagger: Variants = {
   visible: {
     transition: {
       staggerChildren: 0.12,
-      delayChildren: 0.08,
+      delayChildren: 0.05,
     },
   },
 };
 
+export const staggerFast: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+      delayChildren: 0,
+    },
+  },
+};
+
+/** Reveal al entrar en viewport (secciones generales). */
 export const viewportOnce = {
   once: true,
   amount: 0.25,
   margin: "0px 0px -8% 0px",
+} as const;
+
+/**
+ * Solo Skills: dispara anticipado para que las cards no “esperen” al scrollear.
+ * No usar en el resto de secciones.
+ */
+export const viewportEager = {
+  once: true,
+  amount: 0.05,
+  margin: "120px 0px 120px 0px",
 } as const;

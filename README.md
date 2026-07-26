@@ -25,9 +25,12 @@ pnpm preview
 
 ## Configuración
 
+- Dominio de producción: `https://activatucarrera-laboratoria-utp.com`
 - Enlaces y datos del programa: `src/config/site.config.ts`
-- SEO: `src/config/seoConfig.ts`
+- SEO / Open Graph: `src/config/seoConfig.ts`
+- Datos estructurados (JSON-LD): `src/config/structuredData.ts`
 - Contenido de secciones: `src/data/content.ts`
 - Assets: `public/assets/` (copiados desde `info/img/`)
+- `public/robots.txt` + sitemap vía `@astrojs/sitemap`
 
 El enlace de **Postular** está pendiente (`#postular`) según el SDD.

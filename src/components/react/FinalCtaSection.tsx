@@ -7,9 +7,17 @@ type Props = {
   cta: string;
   ctaHref: string;
   image: string;
+  imageAlt: string;
 };
 
-export default function FinalCtaSection({ title, description, cta, ctaHref, image }: Props) {
+export default function FinalCtaSection({
+  title,
+  description,
+  cta,
+  ctaHref,
+  image,
+  imageAlt,
+}: Props) {
   const reduce = useReducedMotion();
 
   return (
@@ -53,7 +61,7 @@ export default function FinalCtaSection({ title, description, cta, ctaHref, imag
         >
           <img
             src={image}
-            alt=""
+            alt={imageAlt}
             className="w-full rounded-[20px] object-cover"
             loading="lazy"
           />

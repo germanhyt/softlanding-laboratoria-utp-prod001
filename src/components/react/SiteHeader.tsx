@@ -52,7 +52,13 @@ export default function SiteHeader({
       >
         <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-4 md:h-[92px] md:px-10">
           <a href="/" className="inline-flex items-center" aria-label={brand}>
-            <img src={logoSrc} alt={brand} className="h-7 w-auto md:h-8" width={180} height={32} />
+            <img
+              src={logoSrc}
+              alt={`Logo ${brand}`}
+              className="h-7 w-auto md:h-8"
+              width={180}
+              height={32}
+            />
           </a>
 
           <nav className="hidden items-center gap-[34px] lg:flex" aria-label="Principal">
@@ -98,7 +104,7 @@ export default function SiteHeader({
           >
             <div className="flex h-full flex-col px-4 pb-8 pt-4">
               <div className="mb-10 flex items-center justify-between">
-                <img src={logoSrc} alt={brand} className="h-7 w-auto" />
+                <img src={logoSrc} alt={`Logo ${brand}`} className="h-7 w-auto" />
                 <button
                   type="button"
                   className="inline-flex h-11 w-11 items-center justify-center"

@@ -12,6 +12,7 @@ type Slide = {
   description: string;
   bold: string;
   image: string;
+  alt: string;
 };
 
 type Props = {
@@ -103,7 +104,7 @@ export default function ExperienceSection({ title, subtitle, slides }: Props) {
                   <div className="px-3 pb-3 md:px-4 md:pb-4">
                     <img
                       src={slide.image}
-                      alt={slide.tag}
+                      alt={slide.alt}
                       className="h-[200px] w-full rounded-[12px] object-cover md:h-[240px]"
                       loading="lazy"
                     />

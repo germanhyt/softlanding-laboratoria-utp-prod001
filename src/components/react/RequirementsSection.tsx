@@ -4,6 +4,7 @@ import RisingArrows from "@/components/react/RisingArrows";
 
 type Card = {
   icon: string;
+  iconAlt: string;
   title: string;
   items: string[];
 };
@@ -13,6 +14,7 @@ type Props = {
   cta: string;
   ctaHref: string;
   image: string;
+  imageAlt: string;
   arrows: string;
   cards: Card[];
 };
@@ -22,6 +24,7 @@ export default function RequirementsSection({
   cta,
   ctaHref,
   image,
+  imageAlt,
   arrows,
   cards,
 }: Props) {
@@ -67,7 +70,7 @@ export default function RequirementsSection({
               >
                 <img
                   src={card.icon}
-                  alt=""
+                  alt={card.iconAlt}
                   className="mb-4 h-8 w-8 object-contain"
                   width={32}
                   height={32}
@@ -120,7 +123,7 @@ export default function RequirementsSection({
           </div>
           <img
             src={image}
-            alt="Estudiantes UTP"
+            alt={imageAlt}
             className="relative z-10 mx-auto mb-0 w-full max-w-[520px] rounded-t-[20px] object-cover object-bottom md:absolute md:bottom-0 md:right-0 md:mx-0 md:max-w-none md:w-[96%] md:rounded-b-none"
             loading="lazy"
           />
