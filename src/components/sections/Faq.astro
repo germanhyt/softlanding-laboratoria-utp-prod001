@@ -1,13 +1,6 @@
 ---
 import { faqContent } from "@/data/content";
-import FaqAccordion from "@/components/react/FaqAccordion";
+import FaqSection from "@/components/react/FaqSection";
 ---
 
-<section class="bg-background pb-16 pt-4 md:pb-24 md:pt-8" aria-labelledby="faq-title">
-  <div class="mx-auto w-full max-w-[1440px] px-4 md:px-10">
-    <h2 id="faq-title" class="section-title mb-10 text-center md:mb-14">
-      {faqContent.title}
-    </h2>
-    <FaqAccordion client:visible items={faqContent.items} />
-  </div>
-</section>
+<FaqSection client:visible title={faqContent.title} items={faqContent.items} />

@@ -1,19 +1,11 @@
 ---
 import { experienceContent } from "@/data/content";
-import ExperienceCarousel from "@/components/react/ExperienceCarousel";
+import ExperienceSection from "@/components/react/ExperienceSection";
 ---
 
-<section class="bg-primary py-14 md:py-20" aria-labelledby="experience-title">
-  <div class="mx-auto w-full max-w-[1440px] px-4 md:px-10">
-    <div class="mx-auto mb-10 max-w-[640px] text-center md:mb-12">
-      <h2 id="experience-title" class="section-title">
-        {experienceContent.title}
-      </h2>
-      <p class="section-body mt-4">
-        {experienceContent.subtitle}
-      </p>
-    </div>
-
-    <ExperienceCarousel client:visible slides={experienceContent.slides} />
-  </div>
-</section>
+<ExperienceSection
+  client:visible
+  title={experienceContent.title}
+  subtitle={experienceContent.subtitle}
+  slides={experienceContent.slides}
+/>

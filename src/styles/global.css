@@ -18,7 +18,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-pill bg-primary px-8 py-3 text-lg font-semibold text-text shadow-cta transition-transform duration-200 hover:scale-[1.02] hover:bg-primary-dark;
+    @apply inline-flex h-[52px] min-w-[150px] items-center justify-center rounded-pill bg-primary px-8 text-lg font-semibold text-text shadow-cta transition-colors duration-200 hover:bg-primary-dark;
   }
 
   .section-title {
@@ -55,21 +55,19 @@
   animation: arrows-rise 8s linear infinite;
 }
 
-.situations-swiper .swiper-pagination-bullet,
+.situations-swiper .swiper-pagination-bullet {
+  @apply bg-line opacity-100;
+}
+
+.situations-swiper .swiper-pagination-bullet-active {
+  @apply bg-text;
+}
+
 .experience-swiper .swiper-pagination-bullet {
   @apply bg-white opacity-100;
 }
 
-.situations-swiper .swiper-pagination-bullet-active,
 .experience-swiper .swiper-pagination-bullet-active {
-  @apply bg-text;
-}
-
-.situations-swiper .swiper-pagination-bullet {
-  @apply bg-line;
-}
-
-.situations-swiper .swiper-pagination-bullet-active {
   @apply bg-text;
 }
 

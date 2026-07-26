@@ -1,25 +1,14 @@
 ---
 import { siteConfig } from "@/config/site.config";
 import { finalCtaContent } from "@/data/content";
-import CtaButton from "@/components/ui/CtaButton.astro";
+import FinalCtaSection from "@/components/react/FinalCtaSection";
 ---
 
-<section class="bg-background py-14 md:py-20" aria-labelledby="final-cta-title">
-  <div class="mx-auto grid w-full max-w-[1440px] items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-10 lg:gap-16">
-    <div class="max-w-[480px]">
-      <h2 id="final-cta-title" class="section-title mb-5">
-        {finalCtaContent.title}
-      </h2>
-      <p class="section-body mb-8 text-text-muted">
-        {finalCtaContent.description}
-      </p>
-      <CtaButton href={siteConfig.links.postular} label={finalCtaContent.cta} />
-    </div>
-    <img
-      src={finalCtaContent.image}
-      alt=""
-      class="w-full rounded-section object-cover"
-      loading="lazy"
-    />
-  </div>
-</section>
+<FinalCtaSection
+  client:visible
+  title={finalCtaContent.title}
+  description={finalCtaContent.description}
+  cta={finalCtaContent.cta}
+  ctaHref={siteConfig.links.postular}
+  image={finalCtaContent.image}
+/>

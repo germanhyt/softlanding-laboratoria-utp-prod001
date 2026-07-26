@@ -11,15 +11,19 @@ export const heroContent = {
 };
 
 export const insightContent = {
-  title: "Hoy una buena formación académica ya no es suficiente por sí sola",
+  titleLead: "Hoy una buena formación académica",
   titleAccent: "ya no es suficiente por sí sola",
-  bodyBefore:
-    "Las empresas buscan mucho más que conocimientos técnicos,",
+  bodyBefore: "Las empresas buscan mucho más que conocimientos técnicos,",
   bodyBold:
     "buscan personas que sepan adaptarse, aprender rápido, trabajar en equipo y aprovechar herramientas como la IA",
   bodyAfter: "para generar más impacto.",
-  decorTop: "/assets/decoradores/vector-top.png",
-  decorBottom: "/assets/decoradores/vector-bottom.png",
+  chevronTop: "/assets/decoradores/chevron-insight-top.svg",
+  chevronBottom: "/assets/decoradores/chevron-insight-bottom.svg",
+};
+
+export const heroAssets = {
+  logoWhite: "/assets/logos/logo-white.png",
+  logoUtp: "/assets/logos/logo-utp.png",
 };
 
 export const situationsContent = {
@@ -140,7 +144,7 @@ export const requirementsContent = {
 
 export const experienceContent = {
   title: "Así será tu experiencia en Activa tu Carrera",
-  subtitle: "Este será tu camino durante las próximas 6 semanas",
+  subtitle: "Este será tu camino durante las próximas 6 semana",
   slides: [
     {
       tag: "Prácticas",

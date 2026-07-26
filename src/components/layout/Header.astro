@@ -1,44 +1,15 @@
 ---
 import { siteConfig } from "@/config/site.config";
 import { navContent } from "@/data/content";
-import CtaButton from "@/components/ui/CtaButton.astro";
-import MobileNav from "@/components/react/MobileNav";
+import SiteHeader from "@/components/react/SiteHeader";
 ---
 
-<header class="sticky top-0 z-50 w-full bg-background">
-  <div class="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-4 md:h-[92px] md:px-10">
-    <a href="/" class="inline-flex items-center" aria-label={siteConfig.brand}>
-      <img
-        src="/assets/logos/logo-black.png"
-        alt={siteConfig.brand}
-        class="h-7 w-auto md:h-8"
-        width="180"
-        height="32"
-      />
-    </a>
-
-    <nav class="hidden items-center gap-8 lg:flex" aria-label="Principal">
-      <a
-        href={siteConfig.links.sobreLaboratoria}
-        class="text-base text-text transition-opacity hover:opacity-70"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {navContent.sobreLaboratoria}
-      </a>
-      <CtaButton href={siteConfig.links.postular} label={navContent.postular} />
-    </nav>
-
-    <div class="lg:hidden">
-      <MobileNav
-        client:load
-        brand={siteConfig.brand}
-        logoSrc="/assets/logos/logo-black.png"
-        sobreLabel={navContent.sobreLaboratoria}
-        sobreHref={siteConfig.links.sobreLaboratoria}
-        postularLabel={navContent.postular}
-        postularHref={siteConfig.links.postular}
-      />
-    </div>
-  </div>
-</header>
+<SiteHeader
+  client:load
+  brand={siteConfig.brand}
+  logoSrc="/assets/logos/logo-black.png"
+  sobreLabel={navContent.sobreLaboratoria}
+  sobreHref={siteConfig.links.sobreLaboratoria}
+  postularLabel={navContent.postular}
+  postularHref={siteConfig.links.postular}
+/>

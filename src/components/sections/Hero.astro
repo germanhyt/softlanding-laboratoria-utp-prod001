@@ -1,51 +1,20 @@
 ---
 import { siteConfig } from "@/config/site.config";
-import { heroContent } from "@/data/content";
-import CtaButton from "@/components/ui/CtaButton.astro";
+import { heroAssets, heroContent } from "@/data/content";
+import HeroSection from "@/components/react/HeroSection";
 ---
 
-<section class="mx-auto w-full max-w-[1440px] px-4 pt-4 md:px-10 md:pt-6" aria-labelledby="hero-title">
-  <div class="relative overflow-hidden rounded-section">
-    <picture>
-      <source media="(min-width: 768px)" srcset={heroContent.imageDesktop} type="image/webp" />
-      <img
-        src={heroContent.imageMobile}
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover"
-        width="1358"
-        height="604"
-        fetchpriority="high"
-      />
-    </picture>
-    <div class="absolute inset-0 bg-gradient-hero-mobile md:bg-gradient-hero" aria-hidden="true"></div>
-
-    <div class="relative z-10 flex min-h-[520px] flex-col justify-between px-5 py-8 md:min-h-[604px] md:px-16 md:py-14 lg:px-24">
-      <div class="max-w-[526px] space-y-5 md:space-y-6">
-        <h1 id="hero-title" class="section-title text-white">
-          {heroContent.title}
-        </h1>
-        <div class="flex gap-3">
-          <span class="mt-1 w-1 shrink-0 self-stretch rounded-full bg-accent-pink md:w-[4px]" aria-hidden="true"></span>
-          <p class="text-sm leading-relaxed text-white md:text-base">
-            {heroContent.description}
-          </p>
-        </div>
-        <CtaButton href={siteConfig.links.postular} label={heroContent.cta} class="mt-2" />
-      </div>
-
-      <div class="mt-10 flex flex-wrap items-center gap-3 text-sm text-white md:mt-0 md:gap-4 md:text-base">
-        <span>{heroContent.tagline}</span>
-        <span class="opacity-70" aria-hidden="true">/</span>
-        <img
-          src="/assets/logos/logo-white.png"
-          alt={siteConfig.brand}
-          class="h-6 w-auto md:h-7"
-          width="160"
-          height="28"
-        />
-        <span class="opacity-70" aria-hidden="true">/</span>
-        <span class="font-semibold tracking-wide">{siteConfig.partner}</span>
-      </div>
-    </div>
-  </div>
-</section>
+<HeroSection
+  client:load
+  title={heroContent.title}
+  description={heroContent.description}
+  cta={heroContent.cta}
+  ctaHref={siteConfig.links.postular}
+  tagline={heroContent.tagline}
+  brand={siteConfig.brand}
+  partner={siteConfig.partner}
+  imageDesktop={heroContent.imageDesktop}
+  imageMobile={heroContent.imageMobile}
+  logoWhite={heroAssets.logoWhite}
+  logoUtp={heroAssets.logoUtp}
+/>
