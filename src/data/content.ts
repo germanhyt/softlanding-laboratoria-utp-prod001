@@ -19,8 +19,7 @@ export const insightContent = {
   bodyBold:
     "buscan personas que sepan adaptarse, aprender rápido, trabajar en equipo y aprovechar herramientas como la IA",
   bodyAfter: "para generar más impacto.",
-  chevronTop: "/assets/decoradores/chevron-insight-top.svg",
-  chevronBottom: "/assets/decoradores/chevron-insight-bottom.svg",
+  chevron: "/assets/decoradores/vector-chevron.webp",
 };
 
 export const heroAssets = {

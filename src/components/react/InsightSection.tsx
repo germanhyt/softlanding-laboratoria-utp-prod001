@@ -7,12 +7,11 @@ type Props = {
   bodyBefore: string;
   bodyBold: string;
   bodyAfter: string;
-  chevronTop: string;
-  chevronBottom: string;
+  chevron: string;
 };
 
 /**
- * Prototype m_part-1 / imagen 3: card amarilla + chevron rosa “>” a la derecha.
+ * Banner insight: card amarilla + vector-chevron a la derecha.
  * Mobile: título y cuerpo apilados. Desktop: dos columnas.
  */
 export default function InsightSection({
@@ -21,8 +20,7 @@ export default function InsightSection({
   bodyBefore,
   bodyBold,
   bodyAfter,
-  chevronTop,
-  chevronBottom,
+  chevron,
 }: Props) {
   const reduce = useReducedMotion();
 
@@ -38,37 +36,30 @@ export default function InsightSection({
         whileInView="visible"
         viewport={viewportOnce}
       >
-        {/* Chevron “>” — piezas superior e inferior alineadas al borde derecho */}
         <img
-          src={chevronTop}
+          src={chevron}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 -top-6 w-[210px] sm:-right-8 sm:w-[240px] md:-right-4 md:-top-[5.5rem] md:w-[360px] lg:-right-16"
-        />
-        <img
-          src={chevronBottom}
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none absolute -bottom-10 -right-1 w-[175px] sm:-bottom-12 sm:w-[200px] md:-bottom-28 md:right-6 md:w-[280px] lg:-right-6"
+          className="pointer-events-none absolute top-0 -right-[12.2%] sm:-right-[2.8%] md:-right-[5.2%] lg:-right-[2.2%] bottom-0 h-full w-auto translate-x-[18%] object-contain object-right sm:translate-x-[24%] md:translate-x-[22%] lg:translate-x-[24%]"
         />
 
-        {/* Mobile: stack vertical tal cual m_part-1 */}
-        <div className="relative z-10 flex flex-col gap-5 pr-[22%] md:hidden">
+        {/* Mobile: stack vertical */}
+        <div className="relative z-10 flex flex-col gap-5 pr-[16%] xl:pr-[30%] sm:pr-[24%] md:hidden">
           <h2
             id="insight-title"
-            className="text-[26px] font-semibold leading-[1.18] text-text"
+            className="text-2xl md:text-2xl font-semibold leading-[1.18] text-text"
           >
             {titleLead}{" "}
             <span className="font-normal">{titleAccent}</span>
           </h2>
-          <p className="text-[15px] leading-relaxed text-text">
+          <p className="text-xs sm:text-sm md:text-base leading-relaxed text-text">
             {bodyBefore} <strong className="font-medium">{bodyBold}</strong> {bodyAfter}
           </p>
         </div>
 
         {/* Desktop: dos columnas */}
         <motion.div
-          className="relative z-10 hidden gap-10 pr-8 md:grid md:grid-cols-[1.15fr_0.95fr] md:items-start md:pr-16 lg:gap-14 lg:pr-24"
+          className="relative z-10 hidden gap-10 pr-12 md:grid md:grid-cols-[1.15fr_0.95fr] md:items-start md:pr-24 lg:gap-14 lg:pr-20"
           initial={reduce ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
