@@ -21,7 +21,11 @@ export default function FinalCtaSection({
   const reduce = useReducedMotion();
 
   return (
-    <section className="bg-background py-14 md:py-20" aria-labelledby="final-cta-title">
+    <section
+      id="postular"
+      className="scroll-mt-[72px] bg-background py-14 md:scroll-mt-[92px] md:py-20"
+      aria-labelledby="final-cta-title"
+    >
       <div className="mx-auto grid w-full max-w-[1440px] items-center gap-8 px-4 md:grid-cols-2 md:gap-12 md:px-10 lg:gap-16">
         <motion.div
           className="max-w-[480px]"

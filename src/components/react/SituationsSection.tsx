@@ -186,7 +186,8 @@ export default function SituationsSection({
 
   return (
     <section
-      className="bg-background-muted pb-14 pt-8 md:pb-20 md:pt-10"
+      id="por-que"
+      className="scroll-mt-[72px] bg-background-muted pb-14 pt-8 md:scroll-mt-[92px] md:pb-20 md:pt-10"
       aria-labelledby="situations-title"
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">

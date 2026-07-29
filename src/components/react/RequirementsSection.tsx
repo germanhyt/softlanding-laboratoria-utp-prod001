@@ -32,7 +32,8 @@ export default function RequirementsSection({
 
   return (
     <section
-      className="relative overflow-hidden bg-background"
+      id="requisitos"
+      className="relative scroll-mt-[72px] overflow-hidden bg-background md:scroll-mt-[92px]"
       aria-labelledby="requirements-title"
     >
       {/* Mobile: flechas a todo el alto de la sección (ancho actual que quedó bien) */}

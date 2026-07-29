@@ -5,6 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 92px;
+    }
   }
 
   body {

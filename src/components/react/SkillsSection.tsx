@@ -48,7 +48,11 @@ export default function SkillsSection({ title, subtitle, cards }: Props) {
   }, []);
 
   return (
-    <section className="bg-primary py-14 md:py-20" aria-labelledby="skills-title">
+    <section
+      id="beneficios"
+      className="scroll-mt-[72px] bg-primary py-14 md:scroll-mt-[92px] md:py-20"
+      aria-labelledby="skills-title"
+    >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.div
           className="mx-auto mb-8 max-w-[820px] text-center md:mb-14"

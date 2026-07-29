@@ -274,4 +274,10 @@ export const navContent = {
   sobreLaboratoria: "Sobre Laboratoria",
   postular: "Postular",
   conoceNos: "Conócenos",
+  links: [
+    { label: "¿Por qué activa tu carrera?", href: "#por-que" },
+    { label: "Beneficios", href: "#beneficios" },
+    { label: "Requisitos", href: "#requisitos" },
+    { label: "Experiencia", href: "#experiencia" },
+  ],
 };
