@@ -26,7 +26,8 @@ export default function InsightSection({
 
   return (
     <section
-      className="mx-auto mt-5 w-full max-w-[1440px] px-4 pb-6 md:mt-8 md:px-10 md:pb-14"
+      id="por-que"
+      className="mx-auto mt-5 w-full max-w-[1440px] scroll-mt-[72px] px-4 pb-6 md:mt-8 md:scroll-mt-[92px] md:px-10 md:pb-14"
       aria-labelledby="insight-title"
     >
       <motion.div
