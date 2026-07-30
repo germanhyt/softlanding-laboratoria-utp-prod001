@@ -65,18 +65,11 @@ export const skillsContent = {
     "No es solo teoría. Son herramientas que aplicarás desde la primera semana para prepararte para tu búsqueda de empleo.",
   cards: [
     {
-      title: "Entrenarás para entrevistas reales",
+      title: "Aprenderás a comunicar el valor que puedes aportar",
       description:
-        "Practicarás entrevistas y recibirás feedback personalizado para llegar con mayor preparación y seguridad.",
-      image: "/assets/section4/entrenaras-entrevistas.webp",
-      alt: "Entrenamiento para entrevistas de trabajo en el programa Activa tu Carrera",
-    },
-    {
-      title: "Usarás la IA como una aliada",
-      description:
-        "Aprenderás a utilizar herramientas de inteligencia artificial para potenciar tu búsqueda de empleo.",
-      image: "/assets/section4/usaras-ia-como-salida.webp",
-      alt: "Inteligencia artificial para estudiantes en su búsqueda de empleo",
+        "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
+      image: "/assets/section4/aprender-comunicar.webp",
+      alt: "Preparación laboral para comunicar el valor profesional ante empresas",
     },
     {
       title: "Definirás tu siguiente paso profesional",
@@ -86,6 +79,20 @@ export const skillsContent = {
       alt: "Orientación profesional para potenciar la carrera universitaria",
     },
     {
+      title: "Construirás un perfil profesional sólido",
+      description:
+        "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
+      image: "/assets/section4/construiras-perfil-profesional.webp",
+      alt: "Construcción de perfil profesional sólido con Activa tu Carrera UTP",
+    },
+    {
+      title: "Entrenarás para entrevistas reales",
+      description:
+        "Practicarás entrevistas y recibirás feedback personalizado para llegar con mayor preparación y seguridad.",
+      image: "/assets/section4/entrenaras-entrevistas.webp",
+      alt: "Entrenamiento para entrevistas de trabajo en el programa Activa tu Carrera",
+    },
+    {
       title: "Fortalecerás tu confianza",
       description:
         "Te prepararás para afrontar entrevistas y dar tus primeros pasos profesionales con mayor seguridad.",
@@ -93,18 +100,11 @@ export const skillsContent = {
       alt: "Estudiantes fortaleciendo habilidades profesionales y confianza laboral",
     },
     {
-      title: "Aprenderás a comunicar el valor que puedes aportar",
+      title: "Usarás la IA como una aliada",
       description:
-        "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
-      image: "/assets/section4/aprender-comunicar.webp",
-      alt: "Preparación laboral para comunicar el valor profesional ante empresas",
-    },
-    {
-      title: "Construirás un perfil profesional sólido",
-      description:
-        "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
-      image: "/assets/section4/construiras-perfil-profesional.webp",
-      alt: "Construcción de perfil profesional sólido con Activa tu Carrera UTP",
+        "Aprenderás a utilizar herramientas de inteligencia artificial para potenciar tu búsqueda de empleo.",
+      image: "/assets/section4/usaras-ia-como-salida.webp",
+      alt: "Inteligencia artificial para estudiantes en su búsqueda de empleo",
     },
   ],
 };
