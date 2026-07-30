@@ -36,8 +36,8 @@ export default function RequirementsSection({
       className="relative scroll-mt-[72px] overflow-hidden bg-background md:scroll-mt-[92px]"
       aria-labelledby="requirements-title"
     >
-      {/* Mobile: flechas a todo el alto de la sección (ancho actual que quedó bien) */}
-      <div className="md:hidden">
+      {/* Mobile: flechas de top a bottom en toda la sección */}
+      <div className="pointer-events-none absolute inset-0 z-[1] md:hidden" aria-hidden="true">
         <RisingArrows src={arrows} className="w-[46%] xs:w-[48%] sm:w-[42%]" />
       </div>
 
@@ -111,9 +111,9 @@ export default function RequirementsSection({
           </motion.div>
         </div>
 
-        {/* Desktop: flechas en la columna visual, ancho previo */}
+        {/* Mobile: imagen a ancho completo; desktop: columna visual con flechas */}
         <motion.div
-          className="relative flex min-h-[320px] flex-col justify-end md:min-h-full"
+          className="relative flex min-h-[320px] w-full flex-col justify-end md:min-h-full"
           initial={reduce ? false : { opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={viewportOnce}
@@ -125,7 +125,7 @@ export default function RequirementsSection({
           <img
             src={image}
             alt={imageAlt}
-            className="relative z-10 mx-auto mb-0 w-full max-w-[520px] rounded-t-[20px] object-cover object-bottom md:absolute md:bottom-0 md:right-0 md:mx-0 md:max-w-none md:w-[96%] md:rounded-b-none"
+            className="relative z-10 -mx-4 mb-0 w-[calc(100%+2rem)] max-w-none rounded-t-[20px] object-cover object-bottom md:absolute md:bottom-0 md:right-0 md:mx-0 md:w-[96%] md:max-w-none md:rounded-b-none"
             loading="lazy"
           />
         </motion.div>
