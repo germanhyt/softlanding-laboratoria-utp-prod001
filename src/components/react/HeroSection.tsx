@@ -49,7 +49,7 @@ export default function HeroSection({
             <img
               src={imageMobile}
               alt={imageAlt}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-[center_calc(50%+2rem)]"
               width={1358}
               height={604}
               fetchPriority="high"

@@ -41,7 +41,7 @@ export default function InsightSection({
           src={chevron}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute top-0 -right-[12.2%] sm:-right-[2.8%] md:-right-[5.2%] lg:-right-[2.2%] bottom-0 h-full w-auto translate-x-[18%] object-contain object-right sm:translate-x-[24%] md:translate-x-[22%] lg:translate-x-[24%]"
+          className="pointer-events-none absolute top-0 -right-[14%] sm:-right-[4%] md:-right-[7%] lg:-right-[3.5%] bottom-0 h-full w-auto translate-x-[22%] object-contain object-right sm:translate-x-[28%] md:translate-x-[26%] lg:translate-x-[28%]"
         />
 
         {/* Mobile: stack vertical */}

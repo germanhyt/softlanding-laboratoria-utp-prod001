@@ -49,12 +49,12 @@ function SituationCard({ slide }: { slide: Slide }) {
             {renderWithBold(slide.text, slide.bold)}
           </p>
         </div>
-        <div className="mt-auto flex justify-end">
-          <div className="rounded-tl-[20px] bg-white px-2 pb-0 pt-2 md:px-3 md:pt-3">
+        <div className="mt-auto flex min-h-0 flex-1 items-end justify-end">
+          <div className="flex h-[160px] w-[min(240px,72%)] items-end justify-center rounded-tl-[20px] bg-white px-2 pb-0 pt-2 sm:h-[172px] sm:w-[min(260px,70%)] md:h-[180px] md:w-[270px] md:px-3 md:pt-3">
             <img
               src={slide.image}
               alt={slide.alt}
-              className="h-[148px] w-auto max-w-[min(260px,68vw)] object-contain object-bottom sm:h-[160px] md:h-[170px]"
+              className="h-full w-full object-contain object-bottom"
               loading="lazy"
             />
           </div>
