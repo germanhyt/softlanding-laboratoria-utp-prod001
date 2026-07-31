@@ -44,13 +44,13 @@ function SituationCard({ slide }: { slide: Slide }) {
   return (
     <article className="flex h-full w-full flex-col overflow-hidden rounded-[20px] shadow-[0_10px_28px_rgba(0,0,0,0.08)]">
       <div className={`relative flex h-full min-h-0 flex-1 flex-col ${slide.bg}`}>
-        <div className="relative z-10 flex shrink-0 flex-col px-5 pb-2 pt-5 md:px-6 md:pt-6">
-          <p className="max-w-[95%] text-[20px] font-medium leading-snug text-text sm:text-[22px] md:max-w-none md:text-[24px] lg:text-[28px]">
+        <div className="relative z-10 flex shrink-0 flex-col px-5 pb-8 pt-5 text-left sm:pb-9 md:px-6 md:pb-6 md:pt-6">
+          <p className="max-w-[92%] text-left text-[20px] font-medium leading-snug text-text sm:text-[22px] md:max-w-none md:text-[24px] lg:text-[28px]">
             {renderWithBold(slide.text, slide.bold)}
           </p>
         </div>
-        <div className="mt-auto flex min-h-0 flex-1 items-end justify-end">
-          <div className="flex h-[160px] w-[min(240px,72%)] items-end justify-center rounded-tl-[20px] bg-white px-2 pb-0 pt-2 sm:h-[172px] sm:w-[min(260px,70%)] md:h-[180px] md:w-[270px] md:px-3 md:pt-3">
+        <div className="mt-auto flex min-h-0 flex-1 items-end justify-end pt-3 md:pt-2">
+          <div className="flex h-[140px] w-[min(220px,68%)] items-end justify-center rounded-tl-[20px] bg-white px-2 pb-0 pt-2 sm:h-[156px] sm:w-[min(250px,68%)] md:h-[180px] md:w-[270px] md:px-3 md:pt-3">
             <img
               src={slide.image}
               alt={slide.alt}
@@ -105,10 +105,10 @@ function PokerDeckStack({ slides }: { slides: Slide[] }) {
 
   return (
     <div
-      className="relative mx-auto w-full max-w-[360px] sm:max-w-[420px] md:mx-0 md:max-w-[480px] lg:max-w-[520px]"
+      className="relative w-full max-w-[360px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[520px]"
       style={{ paddingLeft: STACK_OFFSET_PX * 2 }}
     >
-      <div className="relative aspect-[4/3.2] w-full min-h-[280px] overflow-visible sm:min-h-[300px] md:aspect-[4/3] md:min-h-[320px]">
+      <div className="relative aspect-[4/3.45] w-full min-h-[300px] overflow-visible sm:min-h-[320px] md:aspect-[4/3] md:min-h-[320px]">
         {compacted
           .slice()
           .reverse()
@@ -191,7 +191,7 @@ export default function SituationsSection({
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.div
-          className="flex flex-col items-center gap-8 text-center md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:items-center md:gap-10 md:pl-5 md:text-left lg:gap-14 lg:pl-16"
+          className="flex flex-col items-start gap-8 text-left md:grid md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.15fr)] md:items-center md:gap-10 md:pl-5 lg:gap-14 lg:pl-16"
           variants={reduce ? undefined : stagger}
           initial={reduce ? false : "hidden"}
           whileInView="visible"
@@ -199,7 +199,7 @@ export default function SituationsSection({
         >
           <motion.h2
             id="situations-title"
-            className="max-w-[340px] text-[26px] font-semibold leading-[1.2] text-text sm:max-w-[420px] sm:text-[28px] md:max-w-[480px] md:text-[42px]"
+            className="max-w-[340px] text-left text-[26px] font-semibold leading-[1.2] text-text sm:max-w-[420px] sm:text-[28px] md:max-w-[480px] md:text-[42px]"
             variants={fadeUp}
           >
             {titleBefore}{" "}
@@ -207,7 +207,7 @@ export default function SituationsSection({
           </motion.h2>
 
           <motion.div
-            className="flex w-full items-center justify-center overflow-visible md:justify-start"
+            className="flex w-full items-center justify-start overflow-visible"
             variants={fadeUp}
           >
             <PokerDeckStack slides={slides} />

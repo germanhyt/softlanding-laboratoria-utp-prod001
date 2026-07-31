@@ -65,7 +65,15 @@ export default function ExperienceSection({ title, subtitle, slides }: Props) {
             {title}
           </motion.h2>
           <motion.p className="mt-4 text-base md:text-xl" variants={fadeUp}>
-            {subtitle}
+            {subtitle.includes("próximas 6 semanas") ? (
+              <>
+                Este será tu camino durante las
+                <br className="md:hidden" />{" "}
+                próximas 6 semanas
+              </>
+            ) : (
+              subtitle
+            )}
           </motion.p>
         </motion.div>
 

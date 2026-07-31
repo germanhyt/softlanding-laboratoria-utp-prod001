@@ -79,7 +79,7 @@
   }
 }
 
-/* Loop seamless: 2 copias apiladas → desplaza exactamente 50% */
+/* Loop seamless: 2 copias → -50%; mobile (3 copias) → -33.333% */
 @keyframes arrows-rise {
   from {
     transform: translate3d(0, 0, 0);
@@ -89,9 +89,25 @@
   }
 }
 
+@keyframes arrows-rise-mobile {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -33.333%, 0);
+  }
+}
+
 .arrows-marquee {
   animation: arrows-rise 14s linear infinite;
   will-change: transform;
+}
+
+/* Mobile: más lento (sección más alta) + loop de 3 tiles a ancho completo */
+@media (max-width: 767px) {
+  .arrows-marquee {
+    animation: arrows-rise-mobile 24s linear infinite;
+  }
 }
 
 .skills-swiper .swiper-pagination-bullet {

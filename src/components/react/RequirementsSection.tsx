@@ -36,9 +36,13 @@ export default function RequirementsSection({
       className="relative scroll-mt-[72px] overflow-hidden bg-background md:scroll-mt-[92px]"
       aria-labelledby="requirements-title"
     >
-      {/* Mobile: flechas de top a bottom en toda la sección */}
+      {/* Mobile: flechas top→bottom, ancho completo del asset */}
       <div className="pointer-events-none absolute inset-0 z-[1] md:hidden" aria-hidden="true">
-        <RisingArrows src={arrows} className="w-[46%] xs:w-[48%] sm:w-[42%]" />
+        <RisingArrows
+          src={arrows}
+          fit="width"
+          className="w-[52%] xs:w-[54%] sm:w-[48%]"
+        />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-[1440px] gap-10 px-4 md:grid-cols-[minmax(0,1.05fr)_minmax(300px,0.95fr)] md:items-stretch md:gap-8 md:px-10 md:pb-0 lg:gap-10">

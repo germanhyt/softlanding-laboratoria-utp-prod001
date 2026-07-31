@@ -15,10 +15,10 @@ export const heroContent = {
 export const insightContent = {
   titleLead: "Hoy una buena formación académica",
   titleAccent: "ya no es suficiente por sí sola",
-  bodyBefore: "Las empresas buscan mucho más que conocimientos técnicos,",
+  bodyBefore: "Las empresas buscan mucho más que conocimientos técnicos:",
   bodyBold:
-    "buscan personas que sepan adaptarse, aprender rápido, trabajar en equipo y aprovechar herramientas como la IA",
-  bodyAfter: "para generar más impacto.",
+    "buscan personas que sepan comunicarse, adaptarse, aprender rápido y trabajar en equipo",
+  bodyAfter: "para generar un mayor impacto.",
   chevron: "/assets/decoradores/vector-chevron.webp",
 };
 
@@ -156,7 +156,7 @@ export const requirementsContent = {
 
 export const experienceContent = {
   title: "Así será tu experiencia en Activa tu Carrera",
-  subtitle: "Este será tu camino durante las próximas 6 semana",
+  subtitle: "Este será tu camino durante las próximas 6 semanas",
   slides: [
     {
       tag: "Prácticas",
