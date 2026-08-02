@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Activa tu Carrera",
+  name: "Activa tu carrera",
   brand: "Laboratoria",
   partner: "UTP",
   description:
-    "Participa en Activa tu Carrera, el programa de Laboratoria y UTP para fortalecer tu perfil profesional, prepararte para entrevistas y potenciar tu empleabilidad.",
+    "Participa en Activa tu carrera, el programa de Laboratoria y UTP para fortalecer tu perfil profesional, prepararte para entrevistas y potenciar tu empleabilidad.",
   url: "https://activatucarrera-laboratoria-utp.com",
   locale: "es_PE",
   language: "es-PE",

@@ -1,20 +1,21 @@
 import { siteConfig } from "@/config/site.config";
 
 export const heroContent = {
-  title: "Prepárate para destacar frente a las empresas con Activa tu Carrera",
+  title: "Prepárate para destacar frente a las empresas con Activa tu carrera",
   description:
-    "La UTP y Laboratoria te invitan a postular a Activa tu Carrera, un programa exclusivo de 6 semanas para fortalecer tu perfil profesional y prepararte para afrontar tu búsqueda de empleo con mayor confianza.",
+    "La UTP y Laboratoria te invitan a postular a Activa tu carrera, un programa exclusivo de 6 semanas para fortalecer tu perfil profesional y prepararte para afrontar tu búsqueda de empleo con mayor confianza.",
   cta: "Postular",
   tagline: "Impulsando el talento",
   imageDesktop: "/assets/hero/hero-banner--desktop.webp",
   imageMobile: "/assets/hero/hero-banner--mobile.webp",
   imageAlt:
-    "Estudiantes de UTP participando en el programa Activa tu Carrera de Laboratoria",
+    "Estudiantes de UTP participando en el programa Activa tu carrera de Laboratoria",
 };
 
 export const insightContent = {
-  titleLead: "Hoy una buena formación académica",
-  titleAccent: "ya no es suficiente por sí sola",
+  titleLead: "Una buena formación académica es el punto de partida.",
+  titleAccent:
+    "Compleméntala con herramientas que fortalezcan tu perfil y te ayuden a avanzar con más confianza en tu búsqueda laboral.",
   bodyBefore: "Las empresas buscan mucho más que conocimientos técnicos:",
   bodyBold:
     "buscan personas que sepan comunicarse, adaptarse, aprender rápido y trabajar en equipo",
@@ -46,7 +47,7 @@ export const situationsContent = {
       text: "No sé cómo demostrar mi potencial en un proceso de selección.",
       bold: "demostrar mi potencial",
       image: "/assets/section3/demostrar-mi-potencial.webp",
-      alt: "Sesión de preparación para entrevistas laborales con Activa tu Carrera",
+      alt: "Sesión de preparación para entrevistas laborales con Activa tu carrera",
     },
     {
       id: "herramientas",
@@ -83,14 +84,14 @@ export const skillsContent = {
       description:
         "Transformarás tus conocimientos, proyectos y habilidades en un relato que conecte con las empresas.",
       image: "/assets/section4/construiras-perfil-profesional.webp",
-      alt: "Construcción de perfil profesional sólido con Activa tu Carrera UTP",
+      alt: "Construcción de perfil profesional sólido con Activa tu carrera UTP",
     },
     {
       title: "Entrenarás para entrevistas reales",
       description:
         "Practicarás entrevistas y recibirás feedback personalizado para llegar con mayor preparación y seguridad.",
       image: "/assets/section4/entrenaras-entrevistas.webp",
-      alt: "Entrenamiento para entrevistas de trabajo en el programa Activa tu Carrera",
+      alt: "Entrenamiento para entrevistas de trabajo en el programa Activa tu carrera",
     },
     {
       title: "Fortalecerás tu confianza",
@@ -113,12 +114,12 @@ export const requirementsContent = {
   title: "¿Qué necesitas para participar?",
   cta: "Postular",
   image: "/assets/section5/universitarios-pareja.webp",
-  imageAlt: "Estudiantes de UTP listos para postular al programa Activa tu Carrera de Laboratoria",
+  imageAlt: "Estudiantes de UTP listos para postular al programa Activa tu carrera de Laboratoria",
   arrows: "/assets/decoradores/multiple-arrows-vertical.png",
   cards: [
     {
       icon: "/assets/icons/icon-lapiz.png",
-      iconAlt: "Icono de requisitos para postular a Activa tu Carrera",
+      iconAlt: "Icono de requisitos para postular a Activa tu carrera",
       title: "Requisitos para postular",
       items: [
         "Estás en los últimos años de tu carrera en la UTP.",
@@ -137,7 +138,7 @@ export const requirementsContent = {
     },
     {
       icon: "/assets/icons/icon-reloj.png",
-      iconAlt: "Icono de duración y sesiones del programa Activa tu Carrera",
+      iconAlt: "Icono de duración y sesiones del programa Activa tu carrera",
       title: "Duración y sesiones del programa",
       items: [
         "6 semanas de duración.",
@@ -155,7 +156,7 @@ export const requirementsContent = {
 };
 
 export const experienceContent = {
-  title: "Así será tu experiencia en Activa tu Carrera",
+  title: "Así será tu experiencia en Activa tu carrera",
   subtitle: "Este será tu camino durante las próximas 6 semanas",
   slides: [
     {
@@ -163,7 +164,7 @@ export const experienceContent = {
       description: "Sesiones en vivo con aprendizaje práctico",
       bold: "aprendizaje práctico",
       image: "/assets/section6/1_practicas.webp",
-      alt: "Sesiones en vivo con aprendizaje práctico en Activa tu Carrera",
+      alt: "Sesiones en vivo con aprendizaje práctico en Activa tu carrera",
     },
     {
       tag: "Entrevista",
@@ -205,7 +206,7 @@ export const experienceContent = {
       description: "Certificado de participación",
       bold: "Certificado",
       image: "/assets/section6/7_certificacion.webp",
-      alt: "Certificado de participación del programa Activa tu Carrera",
+      alt: "Certificado de participación del programa Activa tu carrera",
     },
   ],
 };
@@ -217,7 +218,7 @@ export const finalCtaContent = {
   cta: "Postular",
   image: "/assets/section7/convierte-tu-potencial.webp",
   imageAlt:
-    "Estudiantes UTP potenciando su carrera profesional con el programa Activa tu Carrera",
+    "Estudiantes UTP potenciando su carrera profesional con el programa Activa tu carrera",
 };
 
 export const faqContent = {

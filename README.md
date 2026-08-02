@@ -1,6 +1,6 @@
 # Softlanding Laboratoria × UTP
 
-Landing estática de **Activa tu Carrera** (Laboratoria en colaboración con UTP).
+Landing estática de **Activa tu carrera** (Laboratoria en colaboración con UTP).
 
 ## Stack
 
