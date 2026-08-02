@@ -31,7 +31,7 @@ export default function InsightSection({
       aria-labelledby="insight-title"
     >
       <motion.div
-        className="relative mx-auto overflow-hidden rounded-[20px] bg-primary px-5 py-8 md:max-w-[1180px] md:px-16 md:py-[68px] lg:px-[96px]"
+        className="relative mx-auto overflow-hidden rounded-[20px] bg-primary px-5 py-8 md:max-w-[1180px] md:py-[68px] md:pl-14 md:pr-16 lg:pl-16 lg:pr-[96px]"
         variants={reduce ? undefined : fadeUp}
         initial={reduce ? false : "hidden"}
         whileInView="visible"
@@ -60,16 +60,16 @@ export default function InsightSection({
 
         {/* Desktop: dos columnas */}
         <motion.div
-          className="relative z-10 hidden gap-10 pr-12 md:grid md:grid-cols-[1.15fr_0.95fr] md:items-start md:pr-24 lg:gap-14 lg:pr-20"
+          className="relative z-10 hidden gap-10 pr-12 md:grid md:grid-cols-[1.15fr_0.95fr] md:items-center md:pr-16 lg:gap-14 lg:pr-12"
           initial={reduce ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewportOnce}
           transition={{ duration: 0.7, ease: easeOutExpo }}
         >
-          <h2 className="max-w-[520px] text-[36px] font-semibold leading-[1.2] text-text">
+          <h2 className="max-w-[480px] text-[24px] font-semibold leading-[1.25] text-text lg:text-[26px]">
             {titleLead} <span className="font-normal">{titleAccent}</span>
           </h2>
-          <p className="max-w-[400px] pt-1 text-lg leading-relaxed text-text">
+          <p className="max-w-[400px] text-lg leading-relaxed text-text">
             {bodyBefore} <strong className="font-medium">{bodyBold}</strong> {bodyAfter}
           </p>
         </motion.div>
