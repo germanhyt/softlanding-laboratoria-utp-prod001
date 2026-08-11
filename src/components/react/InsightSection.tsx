@@ -41,19 +41,19 @@ export default function InsightSection({
           src={chevron}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute top-0 -right-[14%] sm:-right-[4%] md:-right-[7%] lg:-right-[3.5%] bottom-0 h-full w-auto translate-x-[22%] object-contain object-right sm:translate-x-[28%] md:translate-x-[26%] lg:translate-x-[28%]"
+          className="pointer-events-none absolute inset-y-0 h-full w-auto max-w-none object-cover object-right -right-[14%] translate-x-[22%] max-[449px]:right-0 max-[449px]:translate-x-[4%] sm:-right-[4%] sm:translate-x-[28%] md:-right-[7%] md:translate-x-[26%] lg:-right-[3.5%] lg:translate-x-[28%]"
         />
 
         {/* Mobile: stack vertical */}
-        <div className="relative z-10 flex flex-col gap-5 pr-[16%] xl:pr-[30%] sm:pr-[24%] md:hidden">
+        <div className="relative z-10 flex flex-col gap-4 pr-[16%] xl:pr-[30%] sm:pr-[24%] md:hidden">
           <h2
             id="insight-title"
-            className="text-2xl md:text-2xl font-semibold leading-[1.18] text-text"
+            className="text-[20px] font-semibold leading-[1.28] text-text sm:text-[21px]"
           >
             {titleLead}{" "}
             <span className="font-normal">{titleAccent}</span>
           </h2>
-          <p className="text-xs sm:text-sm md:text-base leading-relaxed text-text">
+          <p className="text-[15px] leading-[1.55] text-text sm:text-base">
             {bodyBefore} <strong className="font-medium">{bodyBold}</strong> {bodyAfter}
           </p>
         </div>
