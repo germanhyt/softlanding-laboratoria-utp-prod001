@@ -36,7 +36,11 @@ export default function FaqSection({ title, items }: Props) {
   const reduce = useReducedMotion();
 
   return (
-    <section className="bg-background pb-16 pt-4 md:pb-24 md:pt-8" aria-labelledby="faq-title">
+    <section
+      id="preguntas-frecuentes"
+      className="scroll-mt-[72px] bg-background pb-16 pt-4 md:scroll-mt-[92px] md:pb-24 md:pt-8"
+      aria-labelledby="faq-title"
+    >
       <div className="mx-auto w-full max-w-[1440px] px-4 md:px-10">
         <motion.h2
           id="faq-title"
