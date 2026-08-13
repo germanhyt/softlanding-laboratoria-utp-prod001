@@ -10,17 +10,17 @@ export const siteConfig = {
   links: {
     conoceNos: "https://laboratoria.la",
     sobreLaboratoria: "https://laboratoria.la",
-    /** Pendiente según SDD */
-    postular: "#postular",
+    postular: "https://laboratoria.typeform.com/to/TPTchbnr",
   },
   program: {
     durationWeeks: 6,
     sessionsPerWeek: 2,
-    sessionHours: 3,
-    individualHoursApprox: 15,
-    liveSchedule: "Los lunes y jueves de: 9:00 a.m - 12:00 p.m",
-    applicationWindow: "Las postulaciones están abiertas del X hasta el X del X",
-    startDate: "Inicio del programa: X de X de 2026",
+    sessionHours: 4,
+    individualHoursApprox: 4,
+    liveSchedule:
+      "Miércoles de 5:00 p.m a 7:00 p.m y sábado de 10:00 a.m a 12:00 p.m",
+    applicationWindow: "Las postulaciones están abiertas del 14 hasta el X.",
+    startDate: "Inicio del programa: 16 de septiembre de 2026",
     selectedStudents: 70,
   },
 } as const;

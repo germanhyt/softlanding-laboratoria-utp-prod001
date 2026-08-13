@@ -91,6 +91,8 @@ export default function HeroSection({
             <motion.div className="mt-7 md:mt-8" variants={fadeUp}>
               <motion.a
                 href={ctaHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary"
                 whileHover={reduce ? undefined : { scale: 1.03, y: -1 }}
                 whileTap={reduce ? undefined : { scale: 0.98 }}

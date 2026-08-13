@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site.config";
 export const heroContent = {
   title: "Prepárate para destacar frente a las empresas con Activa tu carrera",
   description:
-    "La UTP y Laboratoria te invitan a postular a Activa tu carrera, un programa exclusivo de 6 semanas para fortalecer tu perfil profesional y prepararte para afrontar tu búsqueda de empleo con mayor confianza.",
+    "La UTP y Laboratoria te invitan a postular a Activa tu carrera, una experiencia exclusiva para estudiantes de Impulsa que, durante 6 semanas, te ayudará a fortalecer tu perfil profesional y prepararte para afrontar tu búsqueda de empleo con más herramientas y confianza.",
   cta: "Postular",
   tagline: "Impulsando el talento",
   imageDesktop: "/assets/hero/hero-banner--desktop.webp",
@@ -142,8 +142,8 @@ export const requirementsContent = {
       title: "Duración y sesiones del programa",
       items: [
         "6 semanas de duración.",
-        "2 sesiones en vivo por semana (3 horas cada una).",
-        "15 horas de trabajo individual aproximadamente.",
+        "2 sesiones semanales remotas en vivo",
+        "Dedicación semanal: 8 horas en total distribuidas en: 4 horas de las sesiones en vivo + 4 horas de trabajo individual.",
       ],
     },
     {
@@ -242,7 +242,7 @@ export const faqContent = {
     },
     {
       question: "¿Cuántos estudiantes serán seleccionados?",
-      answer: "En esta primera edición se seleccionará un grupo de 70 estudiantes.",
+      answer: "En esta primera edición se seleccionará un grupo de hasta 70 estudiantes.",
     },
     {
       question: "¿Cuánto dura el programa?",
