@@ -41,11 +41,11 @@ export default function InsightSection({
           src={chevron}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 h-full w-auto max-w-none object-cover object-right -right-[14%] translate-x-[22%] max-[449px]:right-0 max-[449px]:translate-x-[4%] sm:-right-[4%] sm:translate-x-[28%] md:-right-[7%] md:translate-x-[26%] lg:-right-[3.5%] lg:translate-x-[28%]"
+          className="pointer-events-none absolute inset-y-0 hidden h-full w-auto max-w-none object-cover object-right md:block -right-[14%] translate-x-[22%] sm:-right-[4%] sm:translate-x-[28%] md:-right-[7%] md:translate-x-[26%] lg:-right-[3.5%] lg:translate-x-[28%]"
         />
 
-        {/* Mobile: stack vertical */}
-        <div className="relative z-10 flex flex-col gap-4 pr-[16%] xl:pr-[30%] sm:pr-[24%] md:hidden">
+        {/* Mobile: stack vertical (sin cinta) */}
+        <div className="relative z-10 flex flex-col gap-4 md:hidden">
           <h2
             id="insight-title"
             className="text-[20px] font-semibold leading-[1.28] text-text sm:text-[21px]"
