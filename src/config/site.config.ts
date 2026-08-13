@@ -19,7 +19,8 @@ export const siteConfig = {
     individualHoursApprox: 4,
     liveSchedule:
       "Miércoles de 5:00 p.m a 7:00 p.m y sábado de 10:00 a.m a 12:00 p.m",
-    applicationWindow: "Las postulaciones están abiertas del 14 hasta el X.",
+    applicationWindow:
+      "Las postulaciones están abiertas del 14 agosto hasta el 1 de septiembre",
     startDate: "Inicio del programa: 16 de septiembre de 2026",
     selectedStudents: 70,
   },
