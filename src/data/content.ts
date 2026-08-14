@@ -125,6 +125,7 @@ export const requirementsContent = {
         "Estás en los últimos años de tu carrera en la UTP.",
         "Tienes 18 años o más.",
         "Cuentas con el tiempo para participar durante las 6 semanas del programa.",
+        "Ser parte del programa Impulsa.",
       ],
     },
     {
@@ -175,7 +176,7 @@ export const experienceContent = {
     },
     {
       tag: "Asesorías 1 a 1",
-      description: "Coaching y acompañamiento personalizado",
+      description: "Mentorías y acompañamiento personalizado",
       bold: "personalizado",
       image: "/assets/section6/3_asesorias.webp",
       alt: "Asesoría profesional y acompañamiento laboral de Laboratoria",
@@ -264,7 +265,7 @@ export const faqContent = {
     },
     {
       question: "¿Cuándo inicia?",
-      answer: "La próxima edición iniciará (fecha por confirmar).",
+      answer: "Inicio del programa: 16 de septiembre de 2026",
       closing:
         "Las personas seleccionadas recibirán toda la información por correo antes del inicio del programa.",
     },
